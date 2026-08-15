@@ -4,13 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#050713">
-<meta name="color-scheme" content="dark light">
 <meta name="description" content="LUNA — عالم للقصص والكتّاب والقرّاء.">
 <title>LUNA — كل حكاية تستحق سماءً</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 :root{--bg:#03050d;--panel:rgba(7,10,25,.78);--line:rgba(198,169,101,.22);--gold:#e6c579;--gold2:#9f7b37;--text:#eee9dc;--muted:#9899aa;--violet:#67558d;--blue:#273c72;--paper:#f4f0e5;--paper-text:#262435}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden}body.light{--bg:#eee5d2;--panel:rgba(250,245,232,.92);--line:rgba(119,92,39,.20);--text:#332f2a;--muted:#746d63;--gold:#8d641d;--gold2:#6f4e18;--paper:#f6efdc;--paper-text:#332f2a}body.light::before{content:'✦  ·  ✧      ·  ✦          ·      ✧  ·      ✦';position:fixed;inset:0;z-index:-1;pointer-events:none;color:rgba(126,91,31,.18);font-family:Georgia,serif;font-size:18px;letter-spacing:26px;line-height:5;transform:rotate(-8deg) scale(1.18);white-space:pre-wrap;overflow:hidden}body.light::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 14% 18%,rgba(210,178,101,.18) 0 2px,transparent 3px),radial-gradient(circle at 82% 22%,rgba(150,112,48,.14) 0 2px,transparent 3px),radial-gradient(circle at 68% 78%,rgba(210,178,101,.15) 0 3px,transparent 4px),radial-gradient(circle at 24% 84%,rgba(150,112,48,.12) 0 2px,transparent 3px);background-size:180px 180px,230px 230px,260px 260px,210px 210px}.light #space{opacity:.12;filter:sepia(.55) brightness(1.15)}.light .nebula{opacity:.45;filter:blur(18px) sepia(.28)}#space{position:fixed;inset:0;width:100%;height:100%;z-index:-3}.nebula{position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 16% 20%,rgba(81,58,130,.22),transparent 25%),radial-gradient(ellipse at 82% 24%,rgba(42,67,132,.20),transparent 24%),radial-gradient(ellipse at 55% 80%,rgba(116,68,102,.16),transparent 30%);filter:blur(12px)}.vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle,transparent 35%,rgba(0,0,0,.72) 100%)}.light .vignette{background:radial-gradient(circle,transparent 35%,rgba(0,0,0,.10) 100%)}.shell{width:min(1500px,calc(100% - 28px));margin:14px auto;display:grid;grid-template-columns:255px 1fr;gap:14px}.panel{border:1px solid var(--line);background:var(--panel);backdrop-filter:blur(18px);box-shadow:0 30px 100px rgba(0,0,0,.34);border-radius:15px}.sidebar{min-height:calc(100vh - 28px);padding:22px 14px;position:sticky;top:14px;height:calc(100vh - 28px)}.brand{text-align:center;padding:6px 0 22px;border-bottom:1px solid rgba(255,255,255,.07)}.brand .mark{font-family:"Cormorant Garamond",serif;font-size:54px;color:var(--gold)}.brand .word{font-family:"Cormorant Garamond",serif;font-size:32px;letter-spacing:9px;color:var(--text);margin-left:7px}.brand small{display:block;color:#77798a;font-size:9px;letter-spacing:5px;margin-top:6px}.nav{padding-top:20px}.nav button{width:100%;display:flex;align-items:center;gap:11px;padding:11px 12px;margin:4px 0;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:14px;text-align:right;cursor:pointer}.nav button:hover,.nav button.active{color:var(--gold);background:rgba(226,194,115,.07);border-color:rgba(226,194,115,.12)}.nav .ico{width:21px;text-align:center;font-size:16px}.side-bottom{position:absolute;left:14px;right:14px;bottom:15px;border-top:1px solid rgba(255,255,255,.07);padding-top:12px}.mini-note{font-size:10px;line-height:1.65;color:#707384;text-align:center}main{min-width:0}.topbar{padding:12px 17px;display:flex;align-items:center;gap:12px;justify-content:space-between;position:sticky;top:14px;z-index:10}.search{flex:1;max-width:500px;position:relative}.search input{width:100%;padding:11px 16px 11px 42px;background:rgba(1,3,11,.46);border:1px solid rgba(255,255,255,.09);border-radius:24px;color:var(--text);outline:none}.light .search input{background:rgba(255,250,238,.82);border-color:rgba(126,91,31,.14)}.search span{position:absolute;left:15px;top:9px;color:#777b8c}.actions{display:flex;gap:8px;align-items:center}.btn{border:1px solid rgba(226,194,115,.42);background:linear-gradient(135deg,#dcb86c,#9e7731);color:#17130a;border-radius:9px;padding:9px 15px;font-weight:700;cursor:pointer}.btn.ghost{background:transparent;color:var(--text);border-color:rgba(255,255,255,.13)}.btn.subtle{background:rgba(226,194,115,.07);color:var(--gold);border-color:rgba(226,194,115,.16)}.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}.theme-btn,.icon-btn{border:1px solid rgba(255,255,255,.11);background:transparent;color:var(--text);border-radius:9px;padding:9px 11px;cursor:pointer}.view{display:none}.view.active{display:block}.hero{min-height:480px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:60px 20px}.orbit{position:absolute;border:1px solid rgba(225,193,111,.13);border-radius:50%;transform:rotate(-18deg);width:620px;height:230px}.orbit:after{content:"";position:absolute;width:8px;height:8px;background:#e9d17e;border-radius:50%;box-shadow:0 0 16px #e9d17e;left:10%;top:3%}.hero-inner{position:relative;z-index:2}.eyebrow{color:#a99a78;letter-spacing:4px;font-size:10px;margin-bottom:14px}.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(85px,12vw,160px);font-weight:500;letter-spacing:7px;line-height:.72;margin:0;color:var(--gold);text-shadow:0 0 45px rgba(224,188,93,.17)}.hero h2{font-family:"Cormorant Garamond",serif;font-size:clamp(25px,3vw,40px);font-weight:500;margin:30px 0 10px;color:var(--text)}.hero p{color:var(--muted);margin:0 auto 25px;max-width:570px;line-height:1.8;font-size:14px}.hero-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.section{margin:14px;padding:20px;border:1px solid rgba(255,255,255,.06);border-radius:13px;background:rgba(3,6,16,.25)}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:15px}.section h3{margin:0;font-family:"Cormorant Garamond",serif;font-size:27px}.section-head span{font-size:10px;color:#727587}.empty{min-height:180px;display:grid;place-items:center;text-align:center;border:1px dashed rgba(214,184,107,.15);border-radius:11px;background:radial-gradient(circle at center,rgba(73,55,106,.09),transparent 58%)}.empty .star{font-size:24px;color:var(--gold);margin-bottom:9px}.empty strong{display:block;font-family:"Cormorant Garamond",serif;font-size:23px;color:var(--text)}.empty p{margin:7px 0 0;color:#777a8b;font-size:12px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{min-height:255px;border:1px solid rgba(255,255,255,.06);border-radius:11px;background:rgba(7,10,22,.48);padding:14px;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer}.light .card{background:rgba(255,250,237,.78);border-color:rgba(126,91,31,.12);box-shadow:0 12px 35px rgba(101,77,35,.07)}.cover{height:160px;border-radius:8px;margin-bottom:11px;background:radial-gradient(circle at 30% 25%,rgba(217,186,105,.14),transparent 10%),linear-gradient(145deg,#080c1e,#0b1025);border:1px solid rgba(255,255,255,.05);display:grid;place-items:center;overflow:hidden}.cover img{width:100%;height:100%;object-fit:cover}.card h4{margin:0;font-size:14px;color:var(--text)}.card small{color:#727587;margin-top:4px}.profile-banner{height:180px;border-radius:12px;background:radial-gradient(circle at center,rgba(83,62,130,.26),transparent 58%),linear-gradient(120deg,#0a0d20,#182447);background-size:cover;background-position:center;position:relative;border:1px solid rgba(255,255,255,.08)}.profile-info{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:end;margin-top:-48px;padding:0 16px 14px}.avatar{width:120px;height:120px;border-radius:50%;border:3px solid #11152a;background:linear-gradient(135deg,#5d4877,#c29a4a);background-size:cover;background-position:center;box-shadow:0 0 30px #000}.profile-info h2{margin:0;color:var(--text);font-family:"Cormorant Garamond",serif;font-size:34px}.username{color:#888997;font-size:12px}.bio{color:#a8a5ae;font-size:12px;line-height:1.7;margin-top:7px}.stats{display:flex;gap:20px;margin-top:10px;font-size:12px;color:#92909a}.stats b{color:var(--gold);margin-inline-start:4px}.story-page{display:grid;grid-template-columns:240px 1fr;gap:18px}.story-cover{width:240px;height:340px;border-radius:12px;background:linear-gradient(145deg,#3d2b63,#0e1732);border:1px solid var(--line);overflow:hidden}.story-cover img{width:100%;height:100%;object-fit:cover}.story-copy h1{font-family:"Cormorant Garamond",serif;font-size:46px;margin:0}.story-copy p{color:var(--muted);line-height:1.9}.pills{display:flex;gap:7px;flex-wrap:wrap}.pill{font-size:10px;border:1px solid rgba(255,255,255,.1);padding:5px 8px;border-radius:20px;color:#aaa6b1}.chapter-list{margin-top:18px}.chapter-row{display:flex;align-items:center;justify-content:space-between;padding:12px;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer}.chapter-row small{color:#767887}.reader{max-width:920px;margin:0 auto;padding:26px}.reader-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.reader-title{text-align:center}.reader-title h1{font-family:"Cormorant Garamond",serif;font-size:36px;margin:15px 0 4px}.reader-title p{color:var(--muted);font-size:11px}.reader-tools{display:flex;gap:7px;flex-wrap:wrap;justify-content:center}.progress-stars{display:flex;gap:5px;justify-content:center;margin:22px 0}.progress-stars span{width:10px;height:10px;border-radius:50%;background:#5f5b6c;box-shadow:none;cursor:pointer}.progress-stars span.read{background:#e6c579;box-shadow:0 0 10px #e6c579}.paragraph{position:relative;padding:4px 4px 9px;margin:0 0 3px;line-height:2.15;font-size:19px;color:var(--text);border-radius:7px}.paragraph:hover{background:rgba(226,194,115,.035)}.paragraph .tools{position:absolute;left:-40px;top:2px;display:flex;opacity:0;gap:3px;transition:.2s}.paragraph:hover .tools{opacity:1}.tiny{width:26px;height:26px;border-radius:50%;padding:0;border:1px solid rgba(226,194,115,.22);background:rgba(0,0,0,.18);color:var(--gold);cursor:pointer}.moon-vote{position:relative;width:47px;height:47px;border-radius:50%;border:1px solid rgba(226,194,115,.35);background:rgba(226,194,115,.05);color:var(--gold);cursor:pointer;font-size:23px}.moon-vote.voted{background:radial-gradient(circle,#e4c777,#8b6423);color:#1d1508}.moon-vote .orbit-star{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff1b8;box-shadow:0 0 10px #fff1b8;inset-inline-start:4px;top:3px;opacity:0}.moon-vote.voted .orbit-star{opacity:1;animation:spinStar 900ms ease-out}.select-note{background:rgba(226,194,115,.07);border:1px solid rgba(226,194,115,.15);padding:9px 11px;border-radius:9px;color:#c4bba8;font-size:11px;margin-top:12px}.inline-comments{margin:8px 0 16px;padding:10px 13px;border-inline-start:2px solid var(--gold2);background:rgba(226,194,115,.035);border-radius:8px}.comment{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px}.comment b{color:var(--gold)}.comment-box{display:flex;gap:7px;margin-top:7px}.comment-box input,.form input,.form textarea,.form select{width:100%;background:rgba(1,3,11,.5);border:1px solid rgba(255,255,255,.1);color:var(--text);padding:10px 11px;border-radius:8px;outline:none}.light .comment-box input,.light .form input,.light .form textarea,.light .form select{background:rgba(255,250,238,.88);border-color:rgba(126,91,31,.14)}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.metric{padding:16px;border:1px solid rgba(255,255,255,.07);border-radius:10px;background:rgba(3,6,16,.25)}.metric b{display:block;font-size:22px;color:var(--gold)}.metric span{font-size:10px;color:var(--muted)}.form{display:grid;gap:10px}.form label{font-size:11px;color:#9c9aa3}.form textarea{min-height:110px;resize:vertical}.messages{display:grid;grid-template-columns:230px 1fr;min-height:450px}.thread-list{border-left:1px solid rgba(255,255,255,.07);padding:8px}.thread{padding:11px;border-radius:9px;cursor:pointer}.thread.active,.thread:hover{background:rgba(226,194,115,.06)}.thread b{display:block;font-size:12px}.thread small{color:#777987}.chat{display:flex;flex-direction:column;padding:12px}.chat-body{flex:1;overflow:auto;padding:10px}.bubble{max-width:70%;padding:10px 12px;border-radius:12px;background:#10152b;margin:6px 0;font-size:12px}.bubble.me{margin-inline-start:auto;background:linear-gradient(135deg,#d6b05b,#8d692c);color:#17130a}.chat-send{display:flex;gap:8px}.chat-send input{flex:1;background:transparent;border:1px solid rgba(255,255,255,.11);padding:11px;border-radius:9px;color:var(--text)}.playlist-card{display:flex;align-items:center;justify-content:space-between;padding:13px;border:1px solid rgba(255,255,255,.07);border-radius:10px;margin-bottom:8px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#11162d;border:1px solid var(--gold2);padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:.25s;z-index:40;font-size:12px}.toast.show{opacity:1;transform:translate(-50%,0)}.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;place-items:center;z-index:50;padding:18px}.modal.show{display:grid}.modal-box{width:min(500px,100%);background:#070a18;border:1px solid rgba(225,193,111,.25);border-radius:14px;padding:23px;box-shadow:0 30px 100px #000}.modal-box h2{font-family:"Cormorant Garamond",serif;font-size:30px;margin:0;color:var(--gold)}.modal-box p{color:#858798;font-size:12px;line-height:1.75}.modal-box .form{margin-top:12px}.provider{width:100%;min-height:46px;padding:10px 16px;border-radius:10px;background:#fff;color:#202124;border:1px solid #dadce0;font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:11px;box-shadow:0 1px 2px rgba(0,0,0,.08);transition:.18s}.provider:hover{background:#f8f9fa;border-color:#c7c9cc;box-shadow:0 2px 6px rgba(0,0,0,.12);transform:translateY(-1px)}.provider .google-logo{width:19px;height:19px;display:block;flex:0 0 19px}.divider{display:flex;align-items:center;gap:10px;color:#707384;font-size:10px;margin:12px 0}.divider:before,.divider:after{content:"";height:1px;background:#242a40;flex:1}.modal-actions{display:flex;gap:8px;margin-top:10px}.switch{text-align:center;font-size:11px;color:#8e8e9a;margin-top:12px}.link{color:var(--gold);cursor:pointer}@keyframes spinStar{0%{transform:rotate(0deg) translateX(0) scale(.5)}60%{transform:rotate(260deg) translateX(10px) scale(1.15)}100%{transform:rotate(360deg) translateX(0) scale(1)}}@media(max-width:1020px){.shell{grid-template-columns:1fr}.sidebar{display:none}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.cards,.grid2{grid-template-columns:1fr}.story-page{grid-template-columns:1fr}.story-cover{width:100%;height:320px}.profile-info{grid-template-columns:1fr;align-items:start;margin-top:-30px}.avatar{width:90px;height:90px}.messages{grid-template-columns:1fr}.thread-list{display:none}.reader{padding:15px}.paragraph{font-size:17px}.paragraph .tools{display:none}.topbar{flex-wrap:wrap}.search{order:3;flex-basis:100%;max-width:none}.actions{width:100%;justify-content:flex-end}.hero h1{font-size:90px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden}body.light{--bg:#f0ede4;--panel:rgba(255,253,248,.88);--line:rgba(119,92,39,.22);--text:#27252f;--muted:#77717b;--gold:#9b6d22;--gold2:#6f4e18}.light #space{filter:brightness(.82)}#space{position:fixed;inset:0;width:100%;height:100%;z-index:-3}.nebula{position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 16% 20%,rgba(81,58,130,.22),transparent 25%),radial-gradient(ellipse at 82% 24%,rgba(42,67,132,.20),transparent 24%),radial-gradient(ellipse at 55% 80%,rgba(116,68,102,.16),transparent 30%);filter:blur(12px)}.vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle,transparent 35%,rgba(0,0,0,.72) 100%)}.light .vignette{background:radial-gradient(circle,transparent 35%,rgba(0,0,0,.10) 100%)}.shell{width:min(1500px,calc(100% - 28px));margin:14px auto;display:grid;grid-template-columns:255px 1fr;gap:14px}.panel{border:1px solid var(--line);background:var(--panel);backdrop-filter:blur(18px);box-shadow:0 30px 100px rgba(0,0,0,.34);border-radius:15px}.sidebar{min-height:calc(100vh - 28px);padding:22px 14px;position:sticky;top:14px;height:calc(100vh - 28px)}.brand{text-align:center;padding:6px 0 22px;border-bottom:1px solid rgba(255,255,255,.07)}.brand .mark{font-family:"Cormorant Garamond",serif;font-size:54px;color:var(--gold)}.brand .word{font-family:"Cormorant Garamond",serif;font-size:32px;letter-spacing:9px;color:var(--text);margin-left:7px}.brand small{display:block;color:#77798a;font-size:9px;letter-spacing:5px;margin-top:6px}.nav{padding-top:20px}.nav button{width:100%;display:flex;align-items:center;gap:11px;padding:11px 12px;margin:4px 0;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:14px;text-align:right;cursor:pointer}.nav button:hover,.nav button.active{color:var(--gold);background:rgba(226,194,115,.07);border-color:rgba(226,194,115,.12)}.nav .ico{width:21px;text-align:center;font-size:16px}.side-bottom{position:absolute;left:14px;right:14px;bottom:15px;border-top:1px solid rgba(255,255,255,.07);padding-top:12px}.mini-note{font-size:10px;line-height:1.65;color:#707384;text-align:center}main{min-width:0}.topbar{padding:12px 17px;display:flex;align-items:center;gap:12px;justify-content:space-between;position:sticky;top:14px;z-index:10}.search{flex:1;max-width:500px;position:relative}.search input{width:100%;padding:11px 16px 11px 42px;background:rgba(1,3,11,.46);border:1px solid rgba(255,255,255,.09);border-radius:24px;color:var(--text);outline:none}.light .search input{background:rgba(255,255,255,.68)}.search span{position:absolute;left:15px;top:9px;color:#777b8c}.actions{display:flex;gap:8px;align-items:center}.btn{border:1px solid rgba(226,194,115,.42);background:linear-gradient(135deg,#dcb86c,#9e7731);color:#17130a;border-radius:9px;padding:9px 15px;font-weight:700;cursor:pointer}.btn.ghost{background:transparent;color:var(--text);border-color:rgba(255,255,255,.13)}.btn.subtle{background:rgba(226,194,115,.07);color:var(--gold);border-color:rgba(226,194,115,.16)} .notification-badge{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;margin-inline-start:auto;border-radius:999px;background:var(--gold);color:#17130a;font-size:9px;font-weight:800}.notification-badge[hidden]{display:none}.playlist-options{display:grid;gap:8px;max-height:260px;overflow:auto;margin:12px 0}.playlist-option{display:flex;align-items:center;gap:9px;width:100%;padding:10px 12px;border:1px solid rgba(226,194,115,.14);border-radius:9px;background:rgba(226,194,115,.05);color:var(--text);cursor:pointer;text-align:right}.playlist-option:hover{background:rgba(226,194,115,.1)}.playlist-option input{accent-color:var(--gold)}.follow-user-btn{white-space:nowrap}.card .status-draft{color:#c59a50}.chapter-row.is-draft{opacity:.78}.tiny.bookmarked{background:rgba(226,194,115,.18);border-color:var(--gold);box-shadow:0 0 8px rgba(226,194,115,.18)}.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}.theme-btn,.icon-btn{border:1px solid rgba(255,255,255,.11);background:transparent;color:var(--text);border-radius:9px;padding:9px 11px;cursor:pointer}.view{display:none}.view.active{display:block}.hero{min-height:480px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:60px 20px}.orbit{position:absolute;border:1px solid rgba(225,193,111,.13);border-radius:50%;transform:rotate(-18deg);width:620px;height:230px}.orbit:after{content:"";position:absolute;width:8px;height:8px;background:#e9d17e;border-radius:50%;box-shadow:0 0 16px #e9d17e;left:10%;top:3%}.hero-inner{position:relative;z-index:2}.eyebrow{color:#a99a78;letter-spacing:4px;font-size:10px;margin-bottom:14px}.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(85px,12vw,160px);font-weight:500;letter-spacing:7px;line-height:.72;margin:0;color:var(--gold);text-shadow:0 0 45px rgba(224,188,93,.17)}.hero h2{font-family:"Cormorant Garamond",serif;font-size:clamp(25px,3vw,40px);font-weight:500;margin:30px 0 10px;color:var(--text)}.hero p{color:var(--muted);margin:0 auto 25px;max-width:570px;line-height:1.8;font-size:14px}.hero-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.section{margin:14px;padding:20px;border:1px solid rgba(255,255,255,.06);border-radius:13px;background:rgba(3,6,16,.25)}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:15px}.section h3{margin:0;font-family:"Cormorant Garamond",serif;font-size:27px}.section-head span{font-size:10px;color:#727587}.empty{min-height:180px;display:grid;place-items:center;text-align:center;border:1px dashed rgba(214,184,107,.15);border-radius:11px;background:radial-gradient(circle at center,rgba(73,55,106,.09),transparent 58%)}.empty .star{font-size:24px;color:var(--gold);margin-bottom:9px}.empty strong{display:block;font-family:"Cormorant Garamond",serif;font-size:23px;color:var(--text)}.empty p{margin:7px 0 0;color:#777a8b;font-size:12px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{min-height:255px;border:1px solid rgba(255,255,255,.06);border-radius:11px;background:rgba(7,10,22,.48);padding:14px;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer}.light .card{background:rgba(255,255,255,.55)}.cover{height:160px;border-radius:8px;margin-bottom:11px;background:radial-gradient(circle at 30% 25%,rgba(217,186,105,.14),transparent 10%),linear-gradient(145deg,#080c1e,#0b1025);border:1px solid rgba(255,255,255,.05);display:grid;place-items:center;overflow:hidden}.cover img{width:100%;height:100%;object-fit:cover}.card h4{margin:0;font-size:14px;color:var(--text)}.card small{color:#727587;margin-top:4px}.profile-banner{height:180px;border-radius:12px;background:radial-gradient(circle at center,rgba(83,62,130,.26),transparent 58%),linear-gradient(120deg,#0a0d20,#182447);background-size:cover;background-position:center;position:relative;border:1px solid rgba(255,255,255,.08)}.profile-info{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:end;margin-top:-48px;padding:0 16px 14px}.avatar{width:120px;height:120px;border-radius:50%;border:3px solid #11152a;background:linear-gradient(135deg,#5d4877,#c29a4a);background-size:cover;background-position:center;box-shadow:0 0 30px #000}.profile-info h2{margin:0;color:var(--text);font-family:"Cormorant Garamond",serif;font-size:34px}.username{color:#888997;font-size:12px}.bio{color:#a8a5ae;font-size:12px;line-height:1.7;margin-top:7px}.stats{display:flex;gap:20px;margin-top:10px;font-size:12px;color:#92909a}.stats b{color:var(--gold);margin-inline-start:4px}.story-page{display:grid;grid-template-columns:240px 1fr;gap:18px}.story-cover{width:240px;height:340px;border-radius:12px;background:linear-gradient(145deg,#3d2b63,#0e1732);border:1px solid var(--line);overflow:hidden}.story-cover img{width:100%;height:100%;object-fit:cover}.story-copy h1{font-family:"Cormorant Garamond",serif;font-size:46px;margin:0}.story-copy p{color:var(--muted);line-height:1.9}.pills{display:flex;gap:7px;flex-wrap:wrap}.pill{font-size:10px;border:1px solid rgba(255,255,255,.1);padding:5px 8px;border-radius:20px;color:#aaa6b1}.chapter-list{margin-top:18px}.chapter-row{display:flex;align-items:center;justify-content:space-between;padding:12px;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer}.chapter-row small{color:#767887}.reader{max-width:920px;margin:0 auto;padding:26px}.reader-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.reader-title{text-align:center}.reader-title h1{font-family:"Cormorant Garamond",serif;font-size:36px;margin:15px 0 4px}.reader-title p{color:var(--muted);font-size:11px}.reader-tools{display:flex;gap:7px;flex-wrap:wrap;justify-content:center}.progress-stars{display:flex;gap:5px;justify-content:center;margin:22px 0}.progress-stars span{width:10px;height:10px;border-radius:50%;background:#5f5b6c;box-shadow:none;cursor:pointer}.progress-stars span.read{background:#e6c579;box-shadow:0 0 10px #e6c579}.paragraph{position:relative;padding:4px 4px 9px;margin:0 0 3px;line-height:2.15;font-size:19px;color:var(--text);border-radius:7px}.paragraph:hover{background:rgba(226,194,115,.035)}.paragraph .tools{position:absolute;left:-40px;top:2px;display:flex;opacity:0;gap:3px;transition:.2s}.paragraph:hover .tools{opacity:1}.tiny{width:26px;height:26px;border-radius:50%;padding:0;border:1px solid rgba(226,194,115,.22);background:rgba(0,0,0,.18);color:var(--gold);cursor:pointer}.moon-vote{position:relative;width:47px;height:47px;border-radius:50%;border:1px solid rgba(226,194,115,.35);background:rgba(226,194,115,.05);color:var(--gold);cursor:pointer;font-size:23px}.moon-vote.voted{background:radial-gradient(circle,#e4c777,#8b6423);color:#1d1508}.moon-vote .orbit-star{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff1b8;box-shadow:0 0 10px #fff1b8;inset-inline-start:4px;top:3px;opacity:0}.moon-vote.voted .orbit-star{opacity:1;animation:spinStar 900ms ease-out}.select-note{background:rgba(226,194,115,.07);border:1px solid rgba(226,194,115,.15);padding:9px 11px;border-radius:9px;color:#c4bba8;font-size:11px;margin-top:12px}.inline-comments{margin:8px 0 16px;padding:10px 13px;border-inline-start:2px solid var(--gold2);background:rgba(226,194,115,.035);border-radius:8px}.comment{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px}.comment b{color:var(--gold)}.comment-box{display:flex;gap:7px;margin-top:7px}.comment-box input,.form input,.form textarea,.form select{width:100%;background:rgba(1,3,11,.5);border:1px solid rgba(255,255,255,.1);color:var(--text);padding:10px 11px;border-radius:8px;outline:none}.light .comment-box input,.light .form input,.light .form textarea,.light .form select{background:rgba(255,255,255,.8)}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.metric{padding:16px;border:1px solid rgba(255,255,255,.07);border-radius:10px;background:rgba(3,6,16,.25)}.metric b{display:block;font-size:22px;color:var(--gold)}.metric span{font-size:10px;color:var(--muted)}.form{display:grid;gap:10px}.form label{font-size:11px;color:#9c9aa3}.form textarea{min-height:110px;resize:vertical}.messages{display:grid;grid-template-columns:230px 1fr;min-height:450px}.thread-list{border-left:1px solid rgba(255,255,255,.07);padding:8px}.thread{padding:11px;border-radius:9px;cursor:pointer}.thread.active,.thread:hover{background:rgba(226,194,115,.06)}.thread b{display:block;font-size:12px}.thread small{color:#777987}.chat{display:flex;flex-direction:column;padding:12px}.chat-body{flex:1;overflow:auto;padding:10px}.bubble{max-width:70%;padding:10px 12px;border-radius:12px;background:#10152b;margin:6px 0;font-size:12px}.bubble.me{margin-inline-start:auto;background:linear-gradient(135deg,#d6b05b,#8d692c);color:#17130a}.chat-send{display:flex;gap:8px}.chat-send input{flex:1;background:transparent;border:1px solid rgba(255,255,255,.11);padding:11px;border-radius:9px;color:var(--text)}.playlist-card{display:flex;align-items:center;justify-content:space-between;padding:13px;border:1px solid rgba(255,255,255,.07);border-radius:10px;margin-bottom:8px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#11162d;border:1px solid var(--gold2);padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:.25s;z-index:40;font-size:12px}.toast.show{opacity:1;transform:translate(-50%,0)}.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;place-items:center;z-index:50;padding:18px}.modal.show{display:grid}.modal-box{width:min(500px,100%);background:#070a18;border:1px solid rgba(225,193,111,.25);border-radius:14px;padding:23px;box-shadow:0 30px 100px #000}.modal-box h2{font-family:"Cormorant Garamond",serif;font-size:30px;margin:0;color:var(--gold)}.modal-box p{color:#858798;font-size:12px;line-height:1.75}.modal-box .form{margin-top:12px}.provider{width:100%;min-height:46px;padding:10px 16px;border-radius:10px;background:#fff;color:#202124;border:1px solid #dadce0;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:11px}.provider:hover{background:#f8f9fa}.google-logo{width:19px;height:19px;display:block;flex:0 0 19px}.divider{display:flex;align-items:center;gap:10px;color:#707384;font-size:10px;margin:12px 0}.divider:before,.divider:after{content:"";height:1px;background:#242a40;flex:1}.modal-actions{display:flex;gap:8px;margin-top:10px}.switch{text-align:center;font-size:11px;color:#8e8e9a;margin-top:12px}.link{color:var(--gold);cursor:pointer}@keyframes spinStar{0%{transform:rotate(0deg) translateX(0) scale(.5)}60%{transform:rotate(260deg) translateX(10px) scale(1.15)}100%{transform:rotate(360deg) translateX(0) scale(1)}}@media(max-width:1020px){.shell{grid-template-columns:1fr}.sidebar{display:none}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.cards,.grid2{grid-template-columns:1fr}.story-page{grid-template-columns:1fr}.story-cover{width:100%;height:320px}.profile-info{grid-template-columns:1fr;align-items:start;margin-top:-30px}.avatar{width:90px;height:90px}.messages{grid-template-columns:1fr}.thread-list{display:none}.reader{padding:15px}.paragraph{font-size:17px}.paragraph .tools{display:none}.topbar{flex-wrap:wrap}.search{order:3;flex-basis:100%;max-width:none}.actions{width:100%;justify-content:flex-end}.hero h1{font-size:90px}}
 </style>
 </head>
 <body>
@@ -25,7 +24,7 @@
     <button onclick="showView('following',this)"><span class="ico">☆</span>المتابعة</button>
     <button onclick="showView('writer',this)"><span class="ico">✎</span>الكتابة</button>
     <button onclick="showView('messages',this)"><span class="ico">✉</span>الرسائل</button>
-    <button onclick="showView('notifications',this)"><span class="ico">♧</span>الإشعارات</button>
+    <button onclick="showView('notifications',this)"><span class="ico">♧</span>الإشعارات<span id="notificationBadge" class="notification-badge" hidden>0</span></button>
     <button onclick="showView('profile',this)"><span class="ico">◉</span>ملفي</button>
     <button onclick="showView('settings',this)"><span class="ico">⚙</span>الإعدادات</button>
   </nav>
@@ -35,7 +34,7 @@
 <main>
 <header class="panel topbar">
   <div class="search"><span>⌕</span><input id="globalSearch" placeholder="ابحث عن رواية أو كاتب..."></div>
-  <div class="actions">
+  <div class="actions" id="accountArea">
     <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">☼</button>
     <button class="btn ghost" onclick="openAuth('signin')">تسجيل الدخول</button>
     <button class="btn" onclick="openAuth('signup')">إنشاء حساب</button>
@@ -111,6 +110,13 @@
   </div></div>
 </section></section>
 
+
+<section id="storyView" class="view">
+  <section class="section">
+    <div id="storyPageMount"></div>
+  </section>
+</section>
+
 <section id="reader" class="view"><section class="section reader">
   <div class="reader-head"><button class="btn ghost" onclick="showView('discover')">← العودة</button><div class="reader-tools"><button class="theme-btn" onclick="toggleTheme()">☼</button><button class="btn subtle" onclick="toggleBookmarkCurrent()">◇ Bookmark</button><button id="voteBtn" class="moon-vote" onclick="voteChapter()">☾<span class="orbit-star"></span></button></div></div>
   <div class="reader-title"><h1 id="readerChapterTitle">الفصل</h1><p id="readerStoryTitle">LUNA</p></div>
@@ -130,74 +136,1687 @@
 <div class="switch" id="authSwitch">ليس لديك حساب؟ <span class="link" onclick="openAuth('signup')">أنشئ حسابًا</span></div>
 </div></div>
 
+<div id="playlistModal" class="modal" onclick="if(event.target===this)closePlaylistModal()"><div class="modal-box"><h2>◇ أضف إلى قائمة</h2><p>اختاري قائمة القراءة التي تريدين إضافة الرواية إليها.</p><div id="playlistOptions" class="playlist-options"></div><div class="form"><input id="newPlaylistInline" placeholder="اسم قائمة جديدة (اختياري)"></div><div class="modal-actions"><button class="btn subtle" onclick="createAndAddPlaylist()">إنشاء وإضافة</button><button class="btn" onclick="confirmPlaylistAdd()">إضافة</button><button class="btn ghost" onclick="closePlaylistModal()">إغلاق</button></div></div></div>
+
 <div id="storyModal" class="modal" onclick="if(event.target===this)closeStoryModal()"><div class="modal-box"><h2>☾ رواية جديدة</h2><p>اصنع عالمًا جديدًا في LUNA.</p><div class="form"><input id="newStoryTitle" placeholder="عنوان الرواية"><textarea id="newStoryDesc" placeholder="نبذة عن الرواية"></textarea><input id="newStoryCover" placeholder="رابط الغلاف (اختياري)"></div><div class="modal-actions"><button class="btn" onclick="createStory()">إنشاء</button><button class="btn ghost" onclick="closeStoryModal()">إلغاء</button></div></div></div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script>
-const SBURL = window.LUNA_CONFIG?.SUPABASE_URL || "";
-const SBKEY = window.LUNA_CONFIG?.SUPABASE_ANON_KEY || "";
-const supabaseClient = (window.supabase && SBURL && SBKEY && !SBKEY.includes("ضع_هنا"))
-  ? window.supabase.createClient(SBURL, SBKEY)
-  : null;
-let currentUser=null, stories=[], activeStory=null, activeChapter=null, readerSelectedParagraph=null, authMode="signin";
+(() => {
+  "use strict";
 
-const canvas=document.getElementById('space');const ctx=canvas.getContext('2d');let W=0,H=0,stars=[],rocks=[],t=0;function resize(){W=canvas.width=innerWidth*devicePixelRatio;H=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);W=innerWidth;H=innerHeight}function rand(a,b){return Math.random()*(b-a)+a}
-function makeSpace(){stars=Array.from({length:170},()=>({x:rand(0,W),y:rand(0,H),r:rand(.25,1.5),a:rand(.25,1),tw:rand(.5,2)}));rocks=Array.from({length:9},()=>({x:rand(-100,W+100),y:rand(-100,H+100),r:rand(2,7),vx:rand(-.05,.05),vy:rand(.02,.08),rot:rand(0,6.28),vr:rand(-.002,.002)}))}
-function draw(){ctx.clearRect(0,0,W,H);for(const s of stars){let a=s.a*(.65+.35*Math.sin(t*s.tw+s.x));ctx.beginPath();ctx.fillStyle=`rgba(236,222,178,${a})`;ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()}for(const r of rocks){r.x+=r.vx;r.y+=r.vy;r.rot+=r.vr;if(r.y>H+30){r.y=-30;r.x=rand(0,W)}ctx.save();ctx.translate(r.x,r.y);ctx.rotate(r.rot);ctx.fillStyle='rgba(122,119,125,.28)';ctx.beginPath();for(let i=0;i<7;i++){let a=i*Math.PI*2/7,rr=r.r*rand(.65,1.2);ctx.lineTo(Math.cos(a)*rr,Math.sin(a)*rr)}ctx.closePath();ctx.fill();ctx.restore()}t+=.016;requestAnimationFrame(draw)}
-addEventListener('resize',()=>{resize();makeSpace()});resize();makeSpace();draw();
+  // ----------------------------
+  // LUNA application state
+  // ----------------------------
+  const SBURL = window.LUNA_CONFIG?.SUPABASE_URL || "";
+  const SBKEY = window.LUNA_CONFIG?.SUPABASE_ANON_KEY || "";
+  const supabaseClient =
+    (window.supabase && SBURL && SBKEY && !SBKEY.includes("ضع_هنا"))
+      ? window.supabase.createClient(SBURL, SBKEY)
+      : null;
 
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.classList.remove('show'),2200)}
-function showView(id,btn){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById(id)?.classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));btn?.classList.add('active');if(id==='writer')loadWriter();if(id==='library')loadLibrary();if(id==='profile')loadProfile();if(id==='notifications')loadNotifications();if(id==='messages')loadMessages()}
-function toggleTheme(){document.body.classList.toggle('light');const mode=document.body.classList.contains('light')?'light':'dark';localStorage.setItem('luna_theme',mode);const b=document.getElementById('themeBtn');if(b)b.textContent=mode==='light'?'☾':'☼'}
-if(localStorage.getItem('luna_theme')==='light'){document.body.classList.add('light');setTimeout(()=>{const b=document.getElementById('themeBtn');if(b)b.textContent='☾'},0)}
+  let currentUser = null;
+  let stories = [];
+  let activeStory = null;
+  let activeChapter = null;
+  let readerSelectedParagraph = null;
+  let authMode = "signin";
+  let editingChapterId = null;
+  let activeConversationId = null;
 
-function openAuth(mode){authMode=mode;document.getElementById('authModal').classList.add('show');const signup=mode==='signup';document.getElementById('authTitle').textContent=signup?'أنشئ حسابك في LUNA':'مرحبًا بعودتك';document.getElementById('authText').textContent=signup?'استخدم Google أو بريدك الإلكتروني واسم المستخدم.':'سجّل الدخول إلى سمائك.';document.getElementById('authUsername').style.display=signup?'block':'none';document.getElementById('authDisplay').style.display=signup?'block':'none';document.getElementById('authSwitch').innerHTML=signup?'لديك حساب بالفعل؟ <span class="link" onclick="openAuth(\'signin\')">تسجيل الدخول</span>':'ليس لديك حساب؟ <span class="link" onclick="openAuth(\'signup\')">أنشئ حسابًا</span>'}
-function closeAuth(){document.getElementById('authModal').classList.remove('show')}
-async function googleAuth(){if(!supabaseClient)return toast('اتصال LUNA بـ Supabase غير مكتمل.');const redirectTo=window.location.origin+'/';const {data,error}=await supabaseClient.auth.signInWithOAuth({provider:'google',options:{redirectTo}});if(error){console.error('LUNA Google OAuth error:',error);toast(error.message||'تعذر بدء تسجيل Google.')}else if(data?.url){window.location.assign(data.url)}}
-async function submitAuth(){if(!supabaseClient)return toast('أضيفي Publishable/Anon key في config.js أولًا.');const email=document.getElementById('authEmail').value.trim(),password=document.getElementById('authPassword').value;let result;if(authMode==='signup'){const username=document.getElementById('authUsername').value.trim(),display_name=document.getElementById('authDisplay').value.trim()||username;if(!email||!password||!username)return toast('أكملي البريد وكلمة المرور واسم المستخدم.');result=await supabaseClient.auth.signUp({email,password,options:{data:{username,display_name}}})}else{result=await supabaseClient.auth.signInWithPassword({email,password})}if(result.error)return toast(result.error.message);toast(authMode==='signup'?'تم إنشاء الحساب. افحصي بريدك إن طلب التأكيد.':'تم تسجيل الدخول ✦');closeAuth();await refreshSession()}
-async function signOut(){await supabaseClient.auth.signOut();currentUser=null;toast('تم تسجيل الخروج');renderAccount()}
-async function refreshSession(){if(!supabaseClient){renderAccount();return}const {data}=await supabaseClient.auth.getSession();currentUser=data.session?.user||null;renderAccount();if(currentUser){await loadStories();await loadProfile()}}
-function renderAccount(){document.querySelector('.actions').innerHTML=`<button class="theme-btn" onclick="toggleTheme()">☼</button>${currentUser?`<button class="btn ghost" onclick="showView('profile')">${esc(currentUser.user_metadata?.display_name||currentUser.email?.split('@')[0]||'ملفي')}</button><button class="btn" onclick="signOut()">خروج</button>`:`<button class="btn ghost" onclick="openAuth('signin')">تسجيل الدخول</button><button class="btn" onclick="openAuth('signup')">إنشاء حساب</button>`}`}
-function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  // ----------------------------
+  // Utility
+  // ----------------------------
+  const $ = (id) => document.getElementById(id);
 
-async function loadStories(){if(!supabaseClient)return;const {data,error}=await supabaseClient.from('stories').select('id,title,description,cover_url,status,author_id,created_at,updated_at,profiles:author_id(display_name,username)').order('updated_at',{ascending:false});if(error)return toast(error.message);stories=data||[];renderStories(stories)}
-function storyCard(s){return `<article class="card" onclick="openStory(${s.id})"><div class="cover">${s.cover_url?`<img src="${esc(s.cover_url)}">`:'☾'}</div><h4>${esc(s.title)}</h4><small>${esc(s.profiles?.display_name||'كاتب لونا')} · ${esc(s.status)}</small></article>`}
-function renderStories(list){document.getElementById('homeStories').innerHTML=list.length?list.slice(0,4).map(storyCard).join(''):`<div class="empty" style="grid-column:1/-1"><div><div class="star">✦</div><strong>لا توجد روايات بعد.</strong><p>كوني من أوائل نجوم LUNA.</p></div></div>`;document.getElementById('discoverStories').innerHTML=list.length?list.map(storyCard).join(''):`<div class="empty" style="grid-column:1/-1"><div><div class="star">✦</div><strong>المرصد هادئ.</strong><p>ستظهر الروايات الجديدة هنا.</p></div></div>`;document.getElementById('featuredCount').textContent=`${list.length} رواية`}
-document.getElementById('discoverSearch').addEventListener('input',e=>{const q=e.target.value.toLowerCase();renderStories(stories.filter(s=>(s.title+' '+(s.profiles?.display_name||'')).toLowerCase().includes(q)))});
+  function esc(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (c) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    }[c]));
+  }
 
-async function newStory(){if(!currentUser)return openAuth('signin');document.getElementById('storyModal').classList.add('show')}
-function closeStoryModal(){document.getElementById('storyModal').classList.remove('show')}
-async function createStory(){if(!supabaseClient||!currentUser)return;const title=document.getElementById('newStoryTitle').value.trim(),description=document.getElementById('newStoryDesc').value.trim(),cover_url=document.getElementById('newStoryCover').value.trim();if(!title)return toast('أضيفي عنوان الرواية.');const {data,error}=await supabaseClient.from('stories').insert({author_id:currentUser.id,title,description,cover_url:cover_url||null}).select().single();if(error)return toast(error.message);closeStoryModal();toast('ولدت روايتك الأولى ✦');await loadStories();await loadWriter();openStory(data.id)}
-async function openStory(id){const s=stories.find(x=>x.id===id);if(!s||!supabaseClient)return;const {data:chapters,error}=await supabaseClient.from('chapters').select('id,chapter_number,title,status,created_at,updated_at').eq('story_id',id).order('chapter_number');if(error)return toast(error.message);activeStory={...s,chapters:chapters||[]};const v=document.getElementById('discover');showView('discover',document.querySelectorAll('.nav button')[1]);const container=document.createElement('div');container.className='section';container.innerHTML=`<div class="story-page"><div class="story-cover">${s.cover_url?`<img src="${esc(s.cover_url)}">`:'☾'}</div><div class="story-copy"><div class="eyebrow">LUNA · عالم جديد</div><h1>${esc(s.title)}</h1><p>بقلم ${esc(s.profiles?.display_name||'كاتب لونا')}</p><div class="pills"><span class="pill">${esc(s.status)}</span><span class="pill">${chapters?.length||0} فصول</span></div><p>${esc(s.description||'')}</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="openReader('${chapters?.[0]?.id||''}')">ابدأ الرحلة</button><button class="btn subtle" onclick="followStory(${s.id})">☆ تابع</button></div><div class="chapter-list">${(chapters||[]).map(c=>`<div class="chapter-row" onclick="openReader('${c.id}')"><span><b>الفصل ${c.chapter_number}: ${esc(c.title)}</b><br><small>${c.status}</small></span><span>›</span></div>`).join('')}</div></div></div>`;v.appendChild(container);container.scrollIntoView({behavior:'smooth'})}
-async function followStory(storyId){if(!supabaseClient||!currentUser)return openAuth('signin');const {data}=await supabaseClient.from('follows').select('*').eq('user_id',currentUser.id).eq('story_id',storyId).maybeSingle();if(data){await supabaseClient.from('follows').delete().eq('user_id',currentUser.id).eq('story_id',storyId);toast('أزيلت من مدارك')}else{await supabaseClient.from('follows').insert({user_id:currentUser.id,story_id:storyId});toast('أضيفت إلى مدارك ✦')}}
+  function toast(msg) {
+    const el = $("toast");
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.add("show");
+    clearTimeout(window.__lunaToast);
+    window.__lunaToast = setTimeout(() => el.classList.remove("show"), 2400);
+  }
 
-async function openReader(chapterId){if(!chapterId||!supabaseClient)return;const {data:ch,error}=await supabaseClient.from('chapters').select('id,story_id,chapter_number,title,content,status,stories:story_id(title)').eq('id',chapterId).single();if(error)return toast(error.message);activeChapter=ch;const {data:pars}=await supabaseClient.from('chapter_paragraphs').select('id,paragraph_number,content').eq('chapter_id',chapterId).order('paragraph_number');activeChapter.paragraphs=pars?.length?pars:ch.content.split(/\\n+/).filter(Boolean).map((content,i)=>({id:`local-${i}`,paragraph_number:i+1,content}));showView('reader');renderReader();await updateProgress(0)}
-function renderReader(){document.getElementById('readerChapterTitle').textContent=`الفصل ${activeChapter.chapter_number}: ${activeChapter.title}`;document.getElementById('readerStoryTitle').textContent=activeChapter.stories?.title||'';const wrap=document.getElementById('readerParagraphs');wrap.innerHTML=activeChapter.paragraphs.map(p=>`<div class="paragraph" data-pid="${p.id}" onclick="selectParagraph('${p.id}')"><div>${esc(p.content)}</div><div class="tools"><button class="tiny" onclick="event.stopPropagation();openInlineComments('${p.id}')">💬</button><button class="tiny" onclick="event.stopPropagation();toggleBookmark('${p.id}')">◇</button></div><div id="comments-${p.id}" class="inline-comments" style="display:none"></div></div>`).join('');const stars=activeChapter.paragraphs.map((_,i)=>`<span id="star-${i}" onclick="jumpParagraph(${i})"></span>`).join('');document.getElementById('progressStars').innerHTML=stars}
-function selectParagraph(id){readerSelectedParagraph=id;document.getElementById('selectionNote').style.display='block'}
-async function openInlineComments(pid){const box=document.getElementById('comments-'+pid);box.style.display=box.style.display==='none'?'block':'none';if(box.style.display==='block'&&supabaseClient){const {data}=await supabaseClient.from('comments').select('id,content,created_at,profiles:user_id(display_name)').eq('paragraph_id',pid).order('created_at');box.innerHTML=`${(data||[]).map(c=>`<div class="comment"><b>${esc(c.profiles?.display_name||'قارئ')}</b><div>${esc(c.content)}</div></div>`).join('')}<div class="comment-box"><input id="commentInput-${pid}" placeholder="أضف تعليقًا على هذه الفقرة..."><button class="btn subtle" onclick="postComment('${pid}')">تعليق</button></div>`}}
-async function postComment(pid){if(!supabaseClient||!currentUser)return openAuth('signin');const input=document.getElementById('commentInput-'+pid);if(!input?.value.trim())return;const {error}=await supabaseClient.from('comments').insert({user_id:currentUser.id,chapter_id:activeChapter.id,paragraph_id:pid,content:input.value.trim()});if(error)return toast(error.message);toast('أضيف تعليقك ✦');await openInlineComments(pid)}
-async function voteChapter(){if(!supabaseClient||!currentUser)return openAuth('signin');const btn=document.getElementById('voteBtn');const {data}=await supabaseClient.from('chapter_votes').select('*').eq('user_id',currentUser.id).eq('chapter_id',activeChapter.id).maybeSingle();if(data){await supabaseClient.from('chapter_votes').delete().eq('user_id',currentUser.id).eq('chapter_id',activeChapter.id);btn.classList.remove('voted');toast('أزيل تصويت القمر')}else{await supabaseClient.from('chapter_votes').insert({user_id:currentUser.id,chapter_id:activeChapter.id});btn.classList.add('voted');toast('دار القمر حول النجم ✦')}}
-async function toggleBookmarkCurrent(){if(!readerSelectedParagraph)return toast('اختاري فقرة أولًا.');await toggleBookmark(readerSelectedParagraph)}
-async function toggleBookmark(pid){if(!supabaseClient||!currentUser)return openAuth('signin');const {data}=await supabaseClient.from('bookmarks').select('*').eq('user_id',currentUser.id).eq('paragraph_id',pid).maybeSingle();if(data){await supabaseClient.from('bookmarks').delete().eq('user_id',currentUser.id).eq('paragraph_id',pid);toast('أزيلت الإشارة')}else{await supabaseClient.from('bookmarks').insert({user_id:currentUser.id,paragraph_id:pid});toast('حفظت الجملة في مدارك ✦')}}
-async function updateProgress(index){if(!activeChapter)return;const total=activeChapter.paragraphs.length;const progress=total?Math.round(index/(total-1||1)*100):0;document.querySelectorAll('.progress-stars span').forEach((el,i)=>el.classList.toggle('read',i<=index));if(supabaseClient&&currentUser&&!String(activeChapter.paragraphs[index]?.id||'').startsWith('local-'))await supabaseClient.from('reading_progress').upsert({user_id:currentUser.id,chapter_id:activeChapter.id,progress})}
-function jumpParagraph(i){const p=document.querySelector(`[data-pid="${activeChapter.paragraphs[i].id}"]`);p?.scrollIntoView({behavior:'smooth',block:'center'});updateProgress(i)}
-window.addEventListener('scroll',()=>{if(!activeChapter)return;const ps=[...document.querySelectorAll('.paragraph')];let idx=0;ps.forEach((p,i)=>{if(p.getBoundingClientRect().top<innerHeight*.55)idx=i});updateProgress(idx)});
+  function setActiveNav(viewId, clickedButton) {
+    const buttons = document.querySelectorAll(".nav button");
+    buttons.forEach((b) => b.classList.remove("active"));
+    if (clickedButton) {
+      clickedButton.classList.add("active");
+      return;
+    }
+    const order = ["home","discover","library","following","writer","messages","notifications","profile","settings"];
+    const index = order.indexOf(viewId);
+    if (index >= 0 && buttons[index]) buttons[index].classList.add("active");
+  }
 
-async function loadWriter(){if(!currentUser)return;const mine=stories.filter(s=>s.author_id===currentUser.id);document.getElementById('writerMetrics').innerHTML=`<div class="metric"><b>${mine.length}</b><span>الروايات</span></div><div class="metric"><b>0</b><span>التصويتات</span></div><div class="metric"><b>0</b><span>التعليقات</span></div><div class="metric"><b>0</b><span>المتابعون</span></div>`;document.getElementById('authorStories').innerHTML=mine.length?mine.map(storyCard).join(''):`<div class="empty"><div><div class="star">✦</div><strong>لم تكتب روايتك الأولى بعد.</strong><p>ابدأ عالمًا جديدًا الآن.</p></div></div>`;const sel=document.getElementById('storySelect');sel.innerHTML=mine.map(s=>`<option value="${s.id}">${esc(s.title)}</option>`).join('');document.getElementById('selectedStoryName').textContent=mine[0]?.title||'اختر رواية'}
-async function saveChapter(status){if(!supabaseClient||!currentUser)return openAuth('signin');const storyId=Number(document.getElementById('storySelect').value);if(!storyId)return toast('أنشئي رواية أولًا.');const title=document.getElementById('chapterTitle').value.trim(),content=document.getElementById('chapterContent').value;if(!title||!content)return toast('أضيفي عنوانًا ومحتوى للفصل.');const {data:old}=await supabaseClient.from('chapters').select('chapter_number').eq('story_id',storyId).order('chapter_number',{ascending:false}).limit(1);const n=(old?.[0]?.chapter_number||0)+1;const {data:ch,error}=await supabaseClient.from('chapters').insert({story_id:storyId,chapter_number:n,title,content,status}).select().single();if(error)return toast(error.message);const paras=content.split(/\\n+/).map(x=>x.trim()).filter(Boolean);for(let i=0;i<paras.length;i++)await supabaseClient.from('chapter_paragraphs').insert({chapter_id:ch.id,paragraph_number:i+1,content:paras[i]});toast(status==='published'?'نُشر الفصل ✦':'حُفظت المسودة ✓');document.getElementById('chapterTitle').value='';document.getElementById('chapterContent').value='';await loadStories();await loadWriter()}
-function createPlaylist(){if(!supabaseClient||!currentUser)return openAuth('signin');const name=prompt('اسم القائمة الجديدة');if(!name)return;supabaseClient.from('playlists').insert({user_id:currentUser.id,name}).then(({error})=>{toast(error?'حدث خطأ':'تم إنشاء القائمة ✦');loadLibrary()})}
-async function loadLibrary(){if(!supabaseClient||!currentUser){document.getElementById('libraryContent').innerHTML='<div class="empty"><div><div class="star">◇</div><strong>سجّل الدخول لترى مكتبتك.</strong></div></div>';document.getElementById('playlistList').innerHTML='';return}const {data:fs}=await supabaseClient.from('follows').select('story_id');const ids=(fs||[]).map(x=>x.story_id);const libs=stories.filter(s=>ids.includes(s.id));document.getElementById('libraryContent').innerHTML=libs.length?`<div class="cards">${libs.map(storyCard).join('')}</div>`:`<div class="empty"><div><div class="star">◇</div><strong>مكتبتك ما زالت فارغة.</strong><p>أضيفي أول عالم إلى مدارك.</p></div></div>`;const {data:pl}=await supabaseClient.from('playlists').select('*').eq('user_id',currentUser.id).order('created_at',{ascending:false});document.getElementById('playlistList').innerHTML=(pl||[]).map(p=>`<div class="playlist-card"><span><b>${esc(p.name)}</b><br><small>${esc(p.description||'قائمة قراءة')}</small></span><button class="btn subtle">فتح</button></div>`).join('')||'<div class="empty"><div><div class="star">✧</div><strong>لا توجد قوائم بعد.</strong></div></div>'}
-async function loadProfile(){if(!currentUser||!supabaseClient)return;const {data:p}=await supabaseClient.from('profiles').select('*').eq('id',currentUser.id).maybeSingle();const prof=p||{display_name:currentUser.user_metadata?.display_name||currentUser.email?.split('@')[0]||'كاتب لونا',username:currentUser.user_metadata?.username||''};document.getElementById('profileName').textContent=prof.profile_name||prof.display_name||'كاتب لونا';document.getElementById('profileUsername').textContent='@'+(prof.username||'username');document.getElementById('profileBio').textContent=prof.bio||'اكتب نبذة عن نفسك.';document.getElementById('profileDisplayName').value=prof.profile_name||prof.display_name||'';document.getElementById('profileUsernameEdit').value=prof.username||'';document.getElementById('profileBioEdit').value=prof.bio||'';document.getElementById('profileAvatarUrl').value=prof.avatar_url||'';document.getElementById('profileCoverUrl').value=prof.cover_url||'';document.getElementById('profileAvatar').style.backgroundImage=prof.avatar_url?`url("${prof.avatar_url}")`:'';document.getElementById('profileBanner').style.backgroundImage=prof.cover_url?`url("${prof.cover_url}")`:'';const mine=stories.filter(s=>s.author_id===currentUser.id);document.getElementById('storiesCount').textContent=mine.length;const {count:fc}=await supabaseClient.from('user_follows').select('*',{count:'exact',head:true}).eq('followed_id',currentUser.id);const {count:fg}=await supabaseClient.from('user_follows').select('*',{count:'exact',head:true}).eq('follower_id',currentUser.id);document.getElementById('followersCount').textContent=fc||0;document.getElementById('followingCount').textContent=fg||0;document.getElementById('profileStories').innerHTML=mine.map(storyCard).join('')}
-async function saveProfile(){if(!supabaseClient||!currentUser)return openAuth('signin');const payload={id:currentUser.id,profile_name:document.getElementById('profileDisplayName').value.trim(),display_name:document.getElementById('profileDisplayName').value.trim()||'كاتب لونا',username:document.getElementById('profileUsernameEdit').value.trim(),bio:document.getElementById('profileBioEdit').value.trim(),avatar_url:document.getElementById('profileAvatarUrl').value.trim()||null,cover_url:document.getElementById('profileCoverUrl').value.trim()||null};const {error}=await supabaseClient.from('profiles').upsert(payload);if(error)return toast(error.message);toast('تم حفظ ملفك ✦');await loadProfile()}
-async function loadNotifications(){if(!supabaseClient||!currentUser)return;const {data}=await supabaseClient.from('notifications').select('*').eq('user_id',currentUser.id).order('created_at',{ascending:false});document.getElementById('notificationList').innerHTML=data?.length?data.map(n=>`<div class="playlist-card"><span><b>${esc(n.type)}</b><br><small>${new Date(n.created_at).toLocaleString('ar')}</small></span></div>`).join(''):'<div class="empty"><div><div class="star">✦</div><strong>لا توجد إشعارات بعد.</strong></div></div>'}
-async function loadMessages(){document.getElementById('chatBody').innerHTML='<div class="empty" style="min-height:350px"><div><div class="star">✉</div><strong>ابدأ محادثتك الأولى.</strong><p>نظام الرسائل جاهز للربط بالمستخدمين عند تسجيل الدخول.</p></div></div>'}
-function newConversation(){toast('اختاري مستخدمًا من ملفه لبدء محادثة.')}
-async function sendMessage(){if(!currentUser)return openAuth('signin');const input=document.getElementById('messageInput');if(!input.value.trim())return;toast('سيتم إرسال الرسائل بعد اختيار محادثة حقيقية.');input.value=''}
+  // ----------------------------
+  // Theme
+  // ----------------------------
+  function applyTheme(mode) {
+    const isLight = mode === "light";
+    document.body.classList.toggle("light", isLight);
+    localStorage.setItem("luna_theme", isLight ? "light" : "dark");
+    const themeButtons = document.querySelectorAll(".theme-btn");
+    themeButtons.forEach((btn) => {
+      btn.textContent = isLight ? "☾" : "☼";
+      btn.setAttribute("aria-label", isLight ? "الوضع الداكن" : "الوضع الفاتح");
+    });
+  }
 
-document.getElementById('globalSearch').addEventListener('input',e=>{const q=e.target.value.toLowerCase();if(q){showView('discover',document.querySelectorAll('.nav button')[1]);document.getElementById('discoverSearch').value=q;renderStories(stories.filter(s=>(s.title+' '+(s.profiles?.display_name||'')).toLowerCase().includes(q)))}});
-supabaseClient?.auth.onAuthStateChange(()=>{setTimeout(()=>refreshSession(),0)});
-refreshSession();
+  window.toggleTheme = function () {
+    applyTheme(document.body.classList.contains("light") ? "dark" : "light");
+  };
+
+  applyTheme(localStorage.getItem("luna_theme") || "light");
+
+  // ----------------------------
+  // View navigation
+  // ----------------------------
+  window.showView = function (id, button) {
+    document.querySelectorAll(".view").forEach((view) => view.classList.remove("active"));
+    const target = $(id);
+    if (!target) return;
+    target.classList.add("active");
+    setActiveNav(id, button);
+
+    if (id === "home") {
+      renderStories(stories);
+    } else if (id === "discover") {
+      renderStories(stories);
+    } else if (id === "library") {
+      loadLibrary();
+    } else if (id === "following") {
+      loadFollowing();
+    } else if (id === "writer") {
+      loadWriter();
+    } else if (id === "profile") {
+      loadProfile();
+    } else if (id === "notifications") {
+      loadNotifications();
+    } else if (id === "messages") {
+      loadMessages();
+    }
+  };
+
+  // ----------------------------
+  // Space background helpers
+  // Disabled visually in light mode, but kept safe.
+  // ----------------------------
+  const canvas = $("space");
+  let ctx = null;
+  let W = 0, H = 0, stars = [], rocks = [], t = 0;
+
+  if (canvas) {
+    ctx = canvas.getContext("2d");
+  }
+
+  function resize() {
+    if (!canvas || !ctx) return;
+    const dpr = Math.max(1, window.devicePixelRatio || 1);
+    W = canvas.width = Math.floor(innerWidth * dpr);
+    H = canvas.height = Math.floor(innerHeight * dpr);
+    canvas.style.width = innerWidth + "px";
+    canvas.style.height = innerHeight + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    W = innerWidth;
+    H = innerHeight;
+  }
+
+  function rand(a, b) {
+    return Math.random() * (b - a) + a;
+  }
+
+  function makeSpace() {
+    stars = Array.from({ length: 170 }, () => ({
+      x: rand(0, W), y: rand(0, H), r: rand(.25, 1.5),
+      a: rand(.25, 1), tw: rand(.5, 2)
+    }));
+    rocks = Array.from({ length: 9 }, () => ({
+      x: rand(-100, W + 100), y: rand(-100, H + 100),
+      r: rand(2, 7), vx: rand(-.05, .05), vy: rand(.02, .08),
+      rot: rand(0, 6.28), vr: rand(-.002, .002)
+    }));
+  }
+
+  function drawSpace() {
+    if (!ctx || !canvas || canvas.style.display === "none") {
+      return;
+    }
+    ctx.clearRect(0, 0, W, H);
+    for (const s of stars) {
+      const alpha = s.a * (.65 + .35 * Math.sin(t * s.tw + s.x));
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(236,222,178,${alpha})`;
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    for (const r of rocks) {
+      r.x += r.vx; r.y += r.vy; r.rot += r.vr;
+      if (r.y > H + 30) { r.y = -30; r.x = rand(0, W); }
+      ctx.save();
+      ctx.translate(r.x, r.y);
+      ctx.rotate(r.rot);
+      ctx.fillStyle = "rgba(122,119,125,.28)";
+      ctx.beginPath();
+      for (let i = 0; i < 7; i++) {
+        const a = i * Math.PI * 2 / 7;
+        const rr = r.r * rand(.65, 1.2);
+        ctx.lineTo(Math.cos(a) * rr, Math.sin(a) * rr);
+      }
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+    t += .016;
+    requestAnimationFrame(drawSpace);
+  }
+
+  if (canvas && ctx) {
+    resize();
+    makeSpace();
+    drawSpace();
+    addEventListener("resize", () => { resize(); makeSpace(); });
+  }
+
+  // ----------------------------
+  // Account / Authentication
+  // ----------------------------
+  window.openAuth = function (mode) {
+    authMode = mode;
+    const modal = $("authModal");
+    if (!modal) return;
+    modal.classList.add("show");
+    const signup = mode === "signup";
+    $("authTitle").textContent = signup ? "أنشئ حسابك في LUNA" : "مرحبًا بعودتك";
+    $("authText").textContent = signup
+      ? "استخدم Google أو بريدك الإلكتروني واسم المستخدم."
+      : "سجّل الدخول إلى سمائك.";
+    $("authUsername").style.display = signup ? "block" : "none";
+    $("authDisplay").style.display = signup ? "block" : "none";
+    $("authSwitch").innerHTML = signup
+      ? 'لديك حساب بالفعل؟ <span class="link" onclick="openAuth(\'signin\')">تسجيل الدخول</span>'
+      : 'ليس لديك حساب؟ <span class="link" onclick="openAuth(\'signup\')">أنشئ حسابًا</span>';
+  };
+
+  window.closeAuth = function () {
+    $("authModal")?.classList.remove("show");
+  };
+
+  window.googleAuth = async function () {
+    if (!supabaseClient) {
+      toast("اتصال LUNA بـ Supabase غير مكتمل.");
+      return;
+    }
+    const redirectTo = window.location.origin + "/";
+    const { data, error } = await supabaseClient.auth.signInWithOAuth({
+      provider: "google",
+      options: { redirectTo }
+    });
+    if (error) {
+      console.error("LUNA Google OAuth error:", error);
+      toast(error.message || "تعذر بدء تسجيل Google.");
+      return;
+    }
+    if (data?.url) window.location.assign(data.url);
+  };
+
+  window.submitAuth = async function () {
+    if (!supabaseClient) {
+      toast("اتصال LUNA بـ Supabase غير مكتمل.");
+      return;
+    }
+
+    const email = $("authEmail").value.trim();
+    const password = $("authPassword").value;
+    if (!email || !password) {
+      toast("أكملي البريد الإلكتروني وكلمة المرور.");
+      return;
+    }
+
+    let result;
+    if (authMode === "signup") {
+      const username = $("authUsername").value.trim();
+      const displayName = $("authDisplay").value.trim() || username;
+      if (!username) {
+        toast("أضيفي اسم المستخدم.");
+        return;
+      }
+
+      result = await supabaseClient.auth.signUp({
+        email,
+        password,
+        options: { data: { username, display_name: displayName } }
+      });
+    } else {
+      result = await supabaseClient.auth.signInWithPassword({ email, password });
+    }
+
+    if (result.error) {
+      console.error("LUNA auth error:", result.error);
+      toast(result.error.message || "تعذر تنفيذ العملية.");
+      return;
+    }
+
+    if (authMode === "signup" && result.data?.user && !result.data.session) {
+      toast("تم إنشاء الحساب. افحصي بريدك الإلكتروني لتأكيد الحساب.");
+    } else {
+      toast(authMode === "signup" ? "تم إنشاء الحساب ✦" : "تم تسجيل الدخول ✦");
+    }
+
+    closeAuth();
+    await refreshSession();
+  };
+
+  async function signOut() {
+    if (!supabaseClient) return;
+    await supabaseClient.auth.signOut();
+    currentUser = null;
+    renderAccount();
+    toast("تم تسجيل الخروج");
+    showView("home");
+  }
+
+  window.signOut = signOut;
+
+  function renderAccount() {
+    const area = $("accountArea");
+    if (!area) return;
+    area.innerHTML = `
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn" aria-label="تبديل المظهر">☾</button>
+      ${currentUser
+        ? `<button class="btn ghost" onclick="showView('profile')">${esc(
+            currentUser.user_metadata?.display_name ||
+            currentUser.email?.split("@")[0] ||
+            "ملفي"
+          )}</button>
+           <button class="btn" onclick="signOut()">خروج</button>`
+        : `<button class="btn ghost" onclick="openAuth('signin')">تسجيل الدخول</button>
+           <button class="btn" onclick="openAuth('signup')">إنشاء حساب</button>`}
+    `;
+    applyTheme(localStorage.getItem("luna_theme") || "light");
+  }
+
+  async function ensureProfile(user) {
+    if (!supabaseClient || !user) return null;
+
+    const { data, error } = await supabaseClient
+      .from("profiles")
+      .select("*")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (error) {
+      console.error("Profile read error:", error);
+      return null;
+    }
+    if (data) return data;
+
+    const payload = {
+      id: user.id,
+      username: user.user_metadata?.username || null,
+      display_name: user.user_metadata?.display_name || user.email?.split("@")[0] || "كاتب لونا"
+    };
+
+    const created = await supabaseClient.from("profiles").upsert(payload).select().single();
+    if (created.error) console.error("Profile create error:", created.error);
+    return created.data || null;
+  }
+
+  async function refreshSession() {
+    if (!supabaseClient) {
+      currentUser = null;
+      renderAccount();
+      return;
+    }
+
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (error) console.error("Session error:", error);
+    currentUser = data?.session?.user || null;
+    renderAccount();
+
+    if (currentUser) {
+      await ensureProfile(currentUser);
+      await loadStories();
+      await loadProfile();
+      await updateNotificationBadge();
+    } else {
+      renderHomeEmpty();
+    }
+  }
+
+  // ----------------------------
+  // Stories
+  // ----------------------------
+  function renderHomeEmpty() {
+    const home = $("homeStories");
+    if (home) home.innerHTML = `<div class="empty" style="grid-column:1/-1;"><div><div class="star">✦</div><strong>لا توجد روايات بعد.</strong><p>ستظهر هنا قريبًا.</p></div></div>`;
+    const discover = $("discoverStories");
+    if (discover) discover.innerHTML = `<div class="empty" style="grid-column:1/-1;"><div><div class="star">✦</div><strong>المرصد هادئ.</strong><p>ستظهر الروايات الجديدة هنا.</p></div></div>`;
+    const count = $("featuredCount");
+    if (count) count.textContent = "0 رواية";
+  }
+
+  function storyCard(s) {
+    return `
+      <article class="card" onclick="openStory(${s.id})">
+        <div class="cover">
+          ${s.cover_url ? `<img src="${esc(s.cover_url)}" alt="">` : "☾"}
+        </div>
+        <h4>${esc(s.title)}</h4>
+        <small>${esc(s.profile?.display_name || "كاتب LUNA")} · ${esc(s.status || "ongoing")}</small>
+      </article>`;
+  }
+
+  function bookCard(s) {
+    return `
+      <article class="book" onclick="openStory(${s.id})">
+        <div class="book-cover">
+          ${s.cover_url ? `<img src="${esc(s.cover_url)}" alt="">` : "☾"}
+        </div>
+        <div class="book-info">
+          <div class="book-title">${esc(s.title)}</div>
+          <div class="book-author">${esc(s.profile?.display_name || "كاتب LUNA")}</div>
+        </div>
+      </article>`;
+  }
+
+  function syncHomeShelves(list) {
+    const home = $("homeStories");
+    if (!home) return;
+    home.innerHTML = list.length
+      ? list.slice(0, 8).map(storyCard).join("")
+      : `<div class="empty" style="grid-column:1/-1;"><div><div class="star">✦</div><strong>لا توجد روايات بعد.</strong><p>ستظهر هنا قريبًا.</p></div></div>`;
+  }
+
+  function renderStories(list) {
+    syncHomeShelves(list);
+    const count = $("featuredCount");
+    if (count) count.textContent = `${list.length} رواية`;
+    const discover = $("discoverStories");
+    if (!discover) return;
+    discover.innerHTML = list.length
+      ? list.map(storyCard).join("")
+      : `<div class="empty" style="grid-column:1/-1;"><div><div class="star">✦</div><strong>المرصد هادئ.</strong><p>ستظهر الروايات الجديدة هنا.</p></div></div>`;
+  }
+
+  async function loadStories() {
+    if (!supabaseClient) {
+      stories = [];
+      renderHomeEmpty();
+      return;
+    }
+
+    const { data, error } = await supabaseClient
+      .from("stories")
+      .select("id,title,description,cover_url,status,author_id,created_at,updated_at")
+      .order("updated_at", { ascending: false });
+
+    if (error) {
+      console.error("Stories load error:", error);
+      toast(error.message || "تعذر تحميل الروايات.");
+      return;
+    }
+
+    const rawStories = data || [];
+    const authorIds = [...new Set(rawStories.map(s => s.author_id).filter(Boolean))];
+    let profileMap = {};
+
+    if (authorIds.length) {
+      const { data: profiles, error: pError } = await supabaseClient
+        .from("profiles")
+        .select("id,display_name,username")
+        .in("id", authorIds);
+
+      if (pError) {
+        console.error("Profiles load error:", pError);
+      } else {
+        profileMap = Object.fromEntries((profiles || []).map(p => [p.id, p]));
+      }
+    }
+
+    stories = rawStories.map(s => ({ ...s, profile: profileMap[s.author_id] || null }));
+    renderStories(stories);
+  }
+
+  window.newStory = function () {
+    if (!currentUser) {
+      openAuth("signin");
+      return;
+    }
+    editingChapterId = null;
+    $("chapterTitle").value = "";
+    $("chapterContent").value = "";
+    $("storyModal")?.classList.add("show");
+  };
+
+  window.closeStoryModal = function () {
+    $("storyModal")?.classList.remove("show");
+  };
+
+  window.createStory = async function () {
+    if (!supabaseClient || !currentUser) {
+      openAuth("signin");
+      return;
+    }
+
+    const title = $("newStoryTitle").value.trim();
+    const description = $("newStoryDesc").value.trim();
+    const coverUrl = $("newStoryCover").value.trim();
+
+    if (!title) {
+      toast("أضيفي عنوان الرواية.");
+      return;
+    }
+
+    const { data, error } = await supabaseClient
+      .from("stories")
+      .insert({
+        author_id: currentUser.id,
+        title,
+        description,
+        cover_url: coverUrl || null
+      })
+      .select()
+      .single();
+
+    if (error) {
+      console.error("Create story error:", error);
+      toast(error.message || "تعذر إنشاء الرواية.");
+      return;
+    }
+
+    $("newStoryTitle").value = "";
+    $("newStoryDesc").value = "";
+    $("newStoryCover").value = "";
+    closeStoryModal();
+
+    toast("ولدت روايتك الأولى ✦");
+    await loadStories();
+    await loadWriter();
+
+    if (data?.id) openStory(data.id);
+  };
+
+  window.openStory = async function (id) {
+    const story = stories.find(s => Number(s.id) === Number(id));
+    if (!story || !supabaseClient) return;
+
+    const { data: chapters, error } = await supabaseClient
+      .from("chapters")
+      .select("id,chapter_number,title,status,created_at,updated_at")
+      .eq("story_id", id)
+      .order("chapter_number");
+
+    if (error) {
+      console.error("Story chapters error:", error);
+      toast(error.message || "تعذر فتح الرواية.");
+      return;
+    }
+
+    const isAuthorView = currentUser?.id === story.author_id;
+    const visibleChapters = isAuthorView ? (chapters || []) : (chapters || []).filter(c => c.status === "published");
+    activeStory = { ...story, chapters: visibleChapters };
+
+    const mount = $("storyPageMount");
+    if (!mount) return;
+
+    mount.innerHTML = `
+      <div class="story-page">
+        <div class="story-cover">
+          ${story.cover_url ? `<img src="${esc(story.cover_url)}" alt="">` : "☾"}
+        </div>
+        <div class="story-copy">
+          <div class="eyebrow">LUNA · عالم جديد</div>
+          <h1>${esc(story.title)}</h1>
+          <p>بقلم ${esc(story.profile?.display_name || "كاتب LUNA")}</p>
+          <div class="pills">
+            <span class="pill">${esc(story.status || "ongoing")}</span>
+            <span class="pill">${visibleChapters.length} فصول</span>
+          </div>
+          <p>${esc(story.description || "")}</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            ${visibleChapters.some(c => c.status === "published") ? `<button class="btn" onclick="openReader('${visibleChapters.find(c => c.status === "published")?.id || ""}')">ابدأ القراءة</button>` : (isAuthorView ? `<button class="btn" onclick="showView('writer'); selectWriterStory(${story.id})">اكتب الفصل الأول</button>` : `<button class="btn ghost" disabled>لا توجد فصول منشورة بعد</button>`)}
+            <button class="btn subtle" onclick="followStory(${story.id})">☆ تابع الرواية</button>
+            ${currentUser && currentUser.id !== story.author_id ? `<button id="followUserBtn-${story.author_id}" class="btn subtle follow-user-btn" onclick="toggleUserFollow('${story.author_id}')">☆ متابعة الكاتب</button>` : ""}
+            ${currentUser ? `<button class="btn subtle" onclick="addStoryToPlaylist(${story.id})">◇ أضف إلى قائمة</button>` : ""}
+            ${currentUser?.id === story.author_id ? `<button class="btn ghost" onclick="showView('writer'); selectWriterStory(${story.id})">✎ إدارة الفصول</button>` : ""}
+          </div>
+          <div class="chapter-list">
+            ${visibleChapters.map(c => `
+              <div class="chapter-row ${c.status === 'draft' ? 'is-draft' : ''}">
+                <span onclick="openReader('${c.id}')">
+                  <b>الفصل ${c.chapter_number}: ${esc(c.title)}</b><br>
+                  <small class="${c.status === 'draft' ? 'status-draft' : ''}">${esc(c.status === 'published' ? 'منشور' : 'مسودة')}</small>
+                </span>
+                <span style="display:flex;gap:6px;align-items:center">
+                  <span onclick="openReader('${c.id}')">›</span>
+                  ${currentUser?.id === story.author_id ? `<button class="btn subtle" style="padding:5px 8px;font-size:10px" onclick="event.stopPropagation(); editChapter('${c.id}')">تعديل</button>` : ""}
+                </span>
+              </div>`).join("")}
+          </div>
+        </div>
+      </div>`;
+
+    showView("storyView");
+    if (currentUser && currentUser.id !== story.author_id) syncUserFollowButton(story.author_id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  async function createNotification(userId, type, payload = {}) {
+    if (!supabaseClient || !userId || userId === currentUser?.id) return;
+    const { error } = await supabaseClient.from("notifications").insert({ user_id: userId, type, payload });
+    if (error) console.error("Notification create error:", error);
+  }
+
+  window.followStory = async function (storyId) {
+    if (!supabaseClient || !currentUser) {
+      openAuth("signin");
+      return;
+    }
+
+    const { data, error } = await supabaseClient
+      .from("follows")
+      .select("*")
+      .eq("user_id", currentUser.id)
+      .eq("story_id", storyId)
+      .maybeSingle();
+
+    if (error) {
+      console.error("Story follow check error:", error);
+      toast(error.message || "تعذر متابعة الرواية.");
+      return;
+    }
+
+    if (data) {
+      const { error: delError } = await supabaseClient
+        .from("follows")
+        .delete()
+        .eq("user_id", currentUser.id)
+        .eq("story_id", storyId);
+
+      if (delError) return toast(delError.message);
+      toast("أزيلت من مدارك");
+    } else {
+      const { error: addError } = await supabaseClient
+        .from("follows")
+        .insert({ user_id: currentUser.id, story_id: storyId });
+
+      if (addError) return toast(addError.message);
+      const story = stories.find(s => Number(s.id) === Number(storyId));
+      if (story) await createNotification(story.author_id, "story_follow", { story_id: storyId, title: story.title });
+      toast("أضيفت إلى مدارك ✦");
+    }
+
+    await loadLibrary();
+  };
+
+  async function syncUserFollowButton(userId) {
+    const btn = $(`followUserBtn-${userId}`);
+    if (!btn || !currentUser || currentUser.id === userId || !supabaseClient) return;
+    const { data, error } = await supabaseClient.from("user_follows")
+      .select("follower_id").eq("follower_id", currentUser.id).eq("followed_id", userId).maybeSingle();
+    if (error) return console.error("User follow state error:", error);
+    btn.textContent = data ? "✓ يتابع" : "☆ متابعة الكاتب";
+  }
+
+  window.toggleUserFollow = async function (userId) {
+    if (!supabaseClient || !currentUser) return openAuth("signin");
+    if (currentUser.id === userId) return;
+    const { data, error } = await supabaseClient.from("user_follows")
+      .select("follower_id").eq("follower_id", currentUser.id).eq("followed_id", userId).maybeSingle();
+    if (error) return toast(error.message);
+    if (data) {
+      const { error: delError } = await supabaseClient.from("user_follows")
+        .delete().eq("follower_id", currentUser.id).eq("followed_id", userId);
+      if (delError) return toast(delError.message);
+      toast("أزيل الكاتب من مدارك");
+    } else {
+      const { error: addError } = await supabaseClient.from("user_follows")
+        .insert({ follower_id: currentUser.id, followed_id: userId });
+      if (addError) return toast(addError.message);
+      await createNotification(userId, "user_follow", { follower_id: currentUser.id });
+      toast("أصبح الكاتب في مدارك ✦");
+    }
+    await loadFollowing();
+    await loadProfile();
+    await syncUserFollowButton(userId);
+  };
+
+  async function loadFollowing() {
+    const container = $("followingContent");
+    if (!container) return;
+    if (!supabaseClient || !currentUser) {
+      container.className = "empty";
+      container.innerHTML = `<div><div class="star">✦</div><strong>سجّلي الدخول أولًا.</strong><p>ستظهر هنا الحسابات والروايات التي تتابعينها.</p></div>`;
+      return;
+    }
+    const { data: follows, error } = await supabaseClient.from("user_follows")
+      .select("followed_id").eq("follower_id", currentUser.id);
+    if (error) return toast(error.message);
+    const ids = (follows || []).map(x => x.followed_id);
+    if (!ids.length) {
+      container.className = "empty";
+      container.innerHTML = `<div><div class="star">✦</div><strong>مدارك ما زالت هادئة.</strong><p>ابدئي بمتابعة كتّابك المفضلين.</p></div>`;
+      return;
+    }
+    const { data: profiles, error: pError } = await supabaseClient.from("profiles")
+      .select("id,display_name,username,bio,avatar_url").in("id", ids);
+    if (pError) return toast(pError.message);
+    const followedStories = stories.filter(story => ids.includes(story.author_id));
+    container.className = "";
+    container.innerHTML = (profiles || []).map(profile => {
+      const userStories = followedStories.filter(story => story.author_id === profile.id).slice(0, 4);
+      return `<div class="playlist-card" style="display:block;margin-bottom:12px"><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:50px;height:50px;border-width:2px;background-image:${profile.avatar_url ? `url('${esc(profile.avatar_url)}')` : "none"}"></div><div style="flex:1"><b>${esc(profile.display_name || "كاتب LUNA")}</b><br><small>@${esc(profile.username || "username")}</small><div class="bio">${esc(profile.bio || "")}</div></div><button class="btn subtle follow-user-btn" onclick="toggleUserFollow('${profile.id}')">إلغاء المتابعة</button></div>${userStories.length ? `<div class="cards" style="margin-top:12px">${userStories.map(storyCard).join("")}</div>` : "<small style=\"display:block;margin-top:10px;color:var(--muted)\">لا توجد روايات بعد.</small>"}</div>`;
+    }).join("");
+  }
+
+  window.selectWriterStory = function (storyId) {
+    if (!currentUser) return openAuth("signin");
+    const mine = stories.filter(s => s.author_id === currentUser.id);
+    const sel = $("storySelect");
+    if (!sel) return;
+    sel.value = String(storyId);
+    const story = mine.find(s => Number(s.id) === Number(storyId));
+    $("selectedStoryName").textContent = story?.title || "اختر رواية";
+    editingChapterId = null;
+    $("chapterTitle").value = "";
+    $("chapterContent").value = "";
+  };
+
+  window.editChapter = async function (chapterId) {
+    if (!supabaseClient || !currentUser) return openAuth("signin");
+    const { data: chapter, error } = await supabaseClient.from("chapters")
+      .select("id,story_id,chapter_number,title,content,status")
+      .eq("id", chapterId).single();
+    if (error) return toast(error.message || "تعذر فتح الفصل للتعديل.");
+    const story = stories.find(s => Number(s.id) === Number(chapter.story_id));
+    if (!story || story.author_id !== currentUser.id) return toast("لا تملكين صلاحية تعديل هذا الفصل.");
+    const { data: paragraphs } = await supabaseClient.from("chapter_paragraphs")
+      .select("id,paragraph_number,content")
+      .eq("chapter_id", chapterId).gt("paragraph_number", 0).order("paragraph_number");
+    editingChapterId = chapter.id;
+    const sel = $("storySelect");
+    sel.innerHTML = stories.filter(s => s.author_id === currentUser.id).map(s => `<option value="${s.id}">${esc(s.title)}</option>`).join("");
+    sel.value = String(story.id);
+    $("selectedStoryName").textContent = story.title;
+    $("chapterTitle").value = chapter.title || "";
+    $("chapterContent").value = paragraphs?.length ? paragraphs.map(p => p.content).join("\n\n") : (chapter.content || "");
+    showView("writer");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // ----------------------------
+  // Reader
+  // ----------------------------
+  window.openReader = async function (chapterId) {
+    if (!chapterId || !supabaseClient) return;
+
+    const { data: chapter, error } = await supabaseClient
+      .from("chapters")
+      .select("id,story_id,chapter_number,title,content,status")
+      .eq("id", chapterId)
+      .single();
+
+    if (error) {
+      console.error("Chapter load error:", error);
+      toast(error.message || "تعذر فتح الفصل.");
+      return;
+    }
+
+    const readerStory = stories.find(s => Number(s.id) === Number(chapter.story_id));
+    if (chapter.status !== "published" && currentUser?.id !== readerStory?.author_id) {
+      toast("هذا الفصل ما زال مسودة.");
+      return;
+    }
+
+    let storyTitle = "";
+    if (chapter.story_id) {
+      const story = stories.find(s => Number(s.id) === Number(chapter.story_id));
+      storyTitle = story?.title || "";
+    }
+
+    const { data: paragraphs, error: pError } = await supabaseClient
+      .from("chapter_paragraphs")
+      .select("id,paragraph_number,content")
+      .eq("chapter_id", chapterId)
+      .gt("paragraph_number", 0)
+      .order("paragraph_number");
+
+    if (pError) {
+      console.error("Paragraph load error:", pError);
+    }
+
+    activeChapter = {
+      ...chapter,
+      storyTitle,
+      paragraphs: paragraphs?.length
+        ? paragraphs
+        : String(chapter.content || "")
+            .split(/\n+/)
+            .map(x => x.trim())
+            .filter(Boolean)
+            .map((content, i) => ({
+              id: `local-${i}`,
+              paragraph_number: i + 1,
+              content
+            }))
+    };
+
+    readerSelectedParagraph = null;
+    $("readerChapterTitle").textContent = `الفصل ${activeChapter.chapter_number}: ${activeChapter.title}`;
+    $("readerStoryTitle").textContent = storyTitle;
+
+    renderReader();
+    showView("reader");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    await restoreProgress();
+    await restoreChapterInteractions();
+  };
+
+  function renderReader() {
+    const wrap = $("readerParagraphs");
+    if (!wrap || !activeChapter) return;
+
+    wrap.innerHTML = activeChapter.paragraphs.map(p => `
+      <div class="paragraph" data-pid="${esc(p.id)}" onclick="selectParagraph('${String(p.id).replaceAll("'", "\\'")}')">
+        <div>${esc(p.content)}</div>
+        <div class="tools">
+          <button class="tiny" onclick="event.stopPropagation();openInlineComments('${String(p.id).replaceAll("'", "\\'")}')">💬</button>
+          <button id="bookmark-${esc(p.id)}" class="tiny bookmark-btn" onclick="event.stopPropagation();toggleBookmark('${String(p.id).replaceAll("'", "\\'")}')">◇</button>
+        </div>
+        <div id="comments-${esc(p.id)}" class="inline-comments" style="display:none"></div>
+      </div>
+    `).join("");
+
+    $("progressStars").innerHTML = activeChapter.paragraphs
+      .map((_, i) => `<span id="star-${i}" onclick="jumpParagraph(${i})"></span>`)
+      .join("");
+  }
+
+  window.selectParagraph = function (id) {
+    readerSelectedParagraph = id;
+    $("selectionNote").style.display = "block";
+  };
+
+  window.openInlineComments = async function (pid) {
+    const box = $(`comments-${pid}`);
+    if (!box) return;
+    box.style.display = box.style.display === "none" ? "block" : "none";
+
+    if (box.style.display !== "block" || !supabaseClient || String(pid).startsWith("local-")) {
+      return;
+    }
+
+    const { data: comments, error } = await supabaseClient
+      .from("comments")
+      .select("id,user_id,content,created_at")
+      .eq("paragraph_id", pid)
+      .order("created_at");
+
+    if (error) {
+      console.error("Comments load error:", error);
+      box.innerHTML = `<div class="comment">تعذر تحميل التعليقات.</div>`;
+      return;
+    }
+
+    const userIds = [...new Set((comments || []).map(c => c.user_id).filter(Boolean))];
+    let commentProfiles = {};
+    if (userIds.length) {
+      const { data: profiles, error: profileError } = await supabaseClient
+        .from("profiles")
+        .select("id,display_name,username")
+        .in("id", userIds);
+      if (profileError) {
+        console.error("Comment profiles load error:", profileError);
+      } else {
+        commentProfiles = Object.fromEntries((profiles || []).map(p => [p.id, p]));
+      }
+    }
+
+    box.innerHTML = `
+      ${(comments || []).map(c => `
+        <div class="comment">
+          <b>${esc(commentProfiles[c.user_id]?.display_name || "قارئ")}</b>
+          <div>${esc(c.content)}</div>
+        </div>`).join("")}
+      <div class="comment-box">
+        <input id="commentInput-${esc(pid)}" placeholder="أضف تعليقًا على هذه الفقرة...">
+        <button class="btn subtle" onclick="postComment('${String(pid).replaceAll("'", "\\'")}')">تعليق</button>
+      </div>`;
+  };
+
+  window.postComment = async function (pid) {
+    if (!supabaseClient || !currentUser) {
+      openAuth("signin");
+      return;
+    }
+    if (String(pid).startsWith("local-")) {
+      toast("هذا الفصل لا يحتوي بعد على فقرات محفوظة.");
+      return;
+    }
+
+    const input = $(`commentInput-${pid}`);
+    if (!input?.value.trim()) return;
+
+    const { error } = await supabaseClient
+      .from("comments")
+      .insert({
+        user_id: currentUser.id,
+        chapter_id: activeChapter.id,
+        paragraph_id: pid,
+        content: input.value.trim()
+      });
+
+    if (error) {
+      console.error("Comment error:", error);
+      toast(error.message || "تعذر إضافة التعليق.");
+      return;
+    }
+
+    const story = stories.find(s => Number(s.id) === Number(activeChapter.story_id));
+    if (story) await createNotification(story.author_id, "new_comment", { chapter_id: activeChapter.id, paragraph_id: pid });
+    toast("أضيف تعليقك ✦");
+    await openInlineComments(pid);
+  };
+
+  window.voteChapter = async function () {
+    if (!supabaseClient || !currentUser) {
+      openAuth("signin");
+      return;
+    }
+
+    const btn = $("voteBtn");
+    const { data, error } = await supabaseClient
+      .from("chapter_votes")
+      .select("*")
+      .eq("user_id", currentUser.id)
+      .eq("chapter_id", activeChapter.id)
+      .maybeSingle();
+
+    if (error) {
+      console.error("Vote check error:", error);
+      toast(error.message || "تعذر تنفيذ التصويت.");
+      return;
+    }
+
+    if (data) {
+      const { error: delError } = await supabaseClient
+        .from("chapter_votes")
+        .delete()
+        .eq("user_id", currentUser.id)
+        .eq("chapter_id", activeChapter.id);
+
+      if (delError) return toast(delError.message);
+      btn?.classList.remove("voted");
+      toast("أزيل تصويت القمر");
+    } else {
+      const { error: addError } = await supabaseClient
+        .from("chapter_votes")
+        .insert({ user_id: currentUser.id, chapter_id: activeChapter.id });
+
+      if (addError) return toast(addError.message);
+      const story = stories.find(s => Number(s.id) === Number(activeChapter.story_id));
+      if (story) await createNotification(story.author_id, "chapter_vote", { chapter_id: activeChapter.id });
+      btn?.classList.add("voted");
+      toast("دار القمر حول النجم ✦");
+    }
+  };
+
+  window.toggleBookmarkCurrent = async function () {
+    if (!readerSelectedParagraph) {
+      toast("اختاري فقرة أولًا.");
+      return;
+    }
+    await window.toggleBookmark(readerSelectedParagraph);
+  };
+
+  window.toggleBookmark = async function (pid) {
+    if (!supabaseClient || !currentUser) {
+      openAuth("signin");
+      return;
+    }
+    if (String(pid).startsWith("local-")) {
+      toast("هذه الفقرة غير محفوظة بعد كفقرة مستقلة.");
+      return;
+    }
+
+    const { data, error } = await supabaseClient
+      .from("bookmarks")
+      .select("*")
+      .eq("user_id", currentUser.id)
+      .eq("paragraph_id", pid)
+      .maybeSingle();
+
+    if (error) return toast(error.message);
+
+    if (data) {
+      const { error: delError } = await supabaseClient
+        .from("bookmarks")
+        .delete()
+        .eq("user_id", currentUser.id)
+        .eq("paragraph_id", pid);
+      if (delError) return toast(delError.message);
+      $("bookmark-" + pid)?.classList.remove("bookmarked");
+      toast("أزيلت الإشارة");
+    } else {
+      const { error: addError } = await supabaseClient
+        .from("bookmarks")
+        .insert({ user_id: currentUser.id, paragraph_id: pid });
+      if (addError) return toast(addError.message);
+      $("bookmark-" + pid)?.classList.add("bookmarked");
+      toast("حفظت الجملة في مدارك ✦");
+    }
+  };
+
+  async function restoreChapterInteractions() {
+    if (!supabaseClient || !currentUser || !activeChapter) return;
+    const voteBtn = $("voteBtn");
+    voteBtn?.classList.remove("voted");
+    const { data: vote } = await supabaseClient.from("chapter_votes")
+      .select("user_id").eq("user_id", currentUser.id).eq("chapter_id", activeChapter.id).maybeSingle();
+    if (vote) voteBtn?.classList.add("voted");
+
+    document.querySelectorAll(".bookmark-btn").forEach(btn => btn.classList.remove("bookmarked"));
+    const ids = activeChapter.paragraphs.map(p => p.id).filter(id => !String(id).startsWith("local-"));
+    if (!ids.length) return;
+    const { data: bookmarks, error } = await supabaseClient.from("bookmarks")
+      .select("paragraph_id").eq("user_id", currentUser.id).in("paragraph_id", ids);
+    if (error) return console.error("Bookmark restore error:", error);
+    (bookmarks || []).forEach(b => $("bookmark-" + b.paragraph_id)?.classList.add("bookmarked"));
+  }
+
+  async function updateProgress(index) {
+    if (!activeChapter) return;
+
+    const total = activeChapter.paragraphs.length;
+    const progress = total > 1
+      ? Math.round(index / (total - 1) * 100)
+      : 100;
+
+    document.querySelectorAll("#progressStars span").forEach((el, i) => {
+      el.classList.toggle("read", i <= index);
+    });
+
+    const paragraphId = activeChapter.paragraphs[index]?.id;
+    if (
+      supabaseClient &&
+      currentUser &&
+      paragraphId &&
+      !String(paragraphId).startsWith("local-")
+    ) {
+      await supabaseClient
+        .from("reading_progress")
+        .upsert({
+          user_id: currentUser.id,
+          chapter_id: activeChapter.id,
+          progress
+        });
+    }
+  }
+
+  async function restoreProgress() {
+    if (!supabaseClient || !currentUser || !activeChapter) {
+      updateProgress(0);
+      return;
+    }
+
+    const { data } = await supabaseClient
+      .from("reading_progress")
+      .select("progress")
+      .eq("user_id", currentUser.id)
+      .eq("chapter_id", activeChapter.id)
+      .maybeSingle();
+
+    if (!data?.progress) {
+      updateProgress(0);
+      return;
+    }
+
+    const index = Math.min(
+      activeChapter.paragraphs.length - 1,
+      Math.max(0, Math.round((data.progress / 100) * (activeChapter.paragraphs.length - 1)))
+    );
+
+    updateProgress(index);
+    const target = document.querySelector(`[data-pid="${activeChapter.paragraphs[index].id}"]`);
+    target?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  window.jumpParagraph = function (i) {
+    const p = activeChapter?.paragraphs?.[i];
+    if (!p) return;
+    document.querySelector(`[data-pid="${p.id}"]`)?.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+    updateProgress(i);
+  };
+
+  let scrollTimer = null;
+  window.addEventListener("scroll", () => {
+    if (!activeChapter) return;
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      const paragraphs = [...document.querySelectorAll("#readerParagraphs .paragraph")];
+      if (!paragraphs.length) return;
+      let idx = 0;
+      paragraphs.forEach((p, i) => {
+        if (p.getBoundingClientRect().top < innerHeight * .55) idx = i;
+      });
+      updateProgress(idx);
+    }, 100);
+  }, { passive: true });
+
+  // ----------------------------
+  // Writer
+  // ----------------------------
+  async function loadWriter() {
+    if (!currentUser) {
+      $("writerMetrics").innerHTML = "";
+      $("authorStories").innerHTML = `<div class="empty"><div><div class="star">✦</div><strong>سجّلي الدخول لتبدئي الكتابة.</strong></div></div>`;
+      return;
+    }
+
+    const mine = stories.filter(s => s.author_id === currentUser.id);
+
+    const storyIds = mine.map(s => s.id);
+    let chapterIds = [];
+    if (storyIds.length) {
+      const { data: chapters } = await supabaseClient.from("chapters").select("id").in("story_id", storyIds);
+      chapterIds = (chapters || []).map(c => c.id);
+    }
+    let votes = 0, comments = 0;
+    if (chapterIds.length) {
+      const { count: voteCount } = await supabaseClient.from("chapter_votes").select("chapter_id", { count: "exact", head: true }).in("chapter_id", chapterIds);
+      const { count: commentCount } = await supabaseClient.from("comments").select("id", { count: "exact", head: true }).in("chapter_id", chapterIds);
+      votes = voteCount || 0;
+      comments = commentCount || 0;
+    }
+    const { count: followers } = await supabaseClient.from("user_follows").select("follower_id", { count: "exact", head: true }).eq("followed_id", currentUser.id);
+
+    $("writerMetrics").innerHTML = `
+      <div class="metric"><b>${mine.length}</b><span>الروايات</span></div>
+      <div class="metric"><b>${votes}</b><span>التصويتات</span></div>
+      <div class="metric"><b>${comments}</b><span>التعليقات</span></div>
+      <div class="metric"><b>${followers || 0}</b><span>المتابعون</span></div>`;
+
+    $("authorStories").innerHTML = mine.length
+      ? mine.map(storyCard).join("")
+      : `<div class="empty" style="grid-column:1/-1;"><div><div class="star">✦</div><strong>لم تكتب روايتك الأولى بعد.</strong><p>ابدأ عالمًا جديدًا الآن.</p></div></div>`;
+
+    const sel = $("storySelect");
+    sel.innerHTML = mine.map(s => `<option value="${s.id}">${esc(s.title)}</option>`).join("");
+    $("selectedStoryName").textContent = mine[0]?.title || "اختر رواية";
+  }
+
+  window.saveChapter = async function (status) {
+    if (!supabaseClient || !currentUser) return openAuth("signin");
+    const storyId = Number($("storySelect").value);
+    if (!storyId) return toast("أنشئي رواية أولًا.");
+    const title = $("chapterTitle").value.trim();
+    const content = $("chapterContent").value;
+    if (!title || !content.trim()) return toast("أضيفي عنوانًا ومحتوى للفصل.");
+
+    let chapterId = editingChapterId;
+    let chapter;
+    let previousStatus = null;
+
+    if (chapterId) {
+      const { data: currentChapter, error: readError } = await supabaseClient.from("chapters")
+        .select("id,story_id,chapter_number,title,content,status").eq("id", chapterId).single();
+      if (readError) return toast(readError.message);
+      if (Number(currentChapter.story_id) !== storyId) return toast("اختاري الرواية الصحيحة للفصل.");
+      previousStatus = currentChapter.status;
+      const { data: updated, error } = await supabaseClient.from("chapters")
+        .update({ title, content, status, updated_at: new Date().toISOString() })
+        .eq("id", chapterId).select().single();
+      if (error) return toast(error.message || "تعذر تحديث الفصل.");
+      chapter = updated;
+    } else {
+      const { data: old, error: oldError } = await supabaseClient.from("chapters")
+        .select("chapter_number").eq("story_id", storyId).order("chapter_number", { ascending: false }).limit(1);
+      if (oldError) return toast(oldError.message);
+      const nextNumber = (old?.[0]?.chapter_number || 0) + 1;
+      const { data: created, error } = await supabaseClient.from("chapters")
+        .insert({ story_id: storyId, chapter_number: nextNumber, title, content, status })
+        .select().single();
+      if (error) return toast(error.message || "تعذر حفظ الفصل.");
+      chapter = created;
+      chapterId = created.id;
+    }
+
+    const paragraphs = content.split(/\n+/).map(x => x.trim()).filter(Boolean);
+    const { data: existing, error: pReadError } = await supabaseClient.from("chapter_paragraphs")
+      .select("id,paragraph_number,content").eq("chapter_id", chapterId).gt("paragraph_number", 0).order("paragraph_number");
+    if (pReadError) return toast(pReadError.message);
+
+    // Stable paragraph identity: UUIDs are preserved only when the exact paragraph text
+    // is still present, regardless of its new position. We intentionally do not guess
+    // identity from similarity, because similar prose can be two different paragraphs
+    // and guessing could move comments/bookmarks to the wrong text. A genuinely edited
+    // paragraph receives a new UUID unless its exact text survives unchanged.
+    const unused = new Set((existing || []).map(p => p.id));
+    const assignments = [];
+    const norm = (value) => String(value || "").trim().replace(/\s+/g, " ");
+
+    // Handle duplicate identical paragraphs deterministically in occurrence order.
+    const exactBuckets = new Map();
+    for (const row of existing || []) {
+      const key = norm(row.content);
+      if (!exactBuckets.has(key)) exactBuckets.set(key, []);
+      exactBuckets.get(key).push(row);
+    }
+
+    const consumedCounts = new Map();
+    for (let i = 0; i < paragraphs.length; i++) {
+      const text = paragraphs[i];
+      const key = norm(text);
+      const bucket = exactBuckets.get(key) || [];
+      const usedCount = consumedCounts.get(key) || 0;
+      const exact = bucket[usedCount] && unused.has(bucket[usedCount].id) ? bucket[usedCount] : null;
+      if (exact) {
+        unused.delete(exact.id);
+        consumedCounts.set(key, usedCount + 1);
+        assignments.push({ number: i + 1, content: text, existing: exact });
+      } else {
+        assignments.push({ number: i + 1, content: text, existing: null });
+      }
+    }
+
+    // Move every current row to a unique temporary negative value first.
+    // This avoids collisions with the chapter UNIQUE(paragraph_number) constraint
+    // while rows are being reordered.
+    const tempBase = -(Date.now() * 1000);
+    for (let i = 0; i < (existing || []).length; i++) {
+      const { error } = await supabaseClient.from("chapter_paragraphs")
+        .update({ paragraph_number: tempBase - i - 1 }).eq("id", existing[i].id);
+      if (error) return toast(error.message);
+    }
+
+    for (const row of assignments) {
+      if (row.existing) {
+        const { error } = await supabaseClient.from("chapter_paragraphs")
+          .update({ paragraph_number: row.number, content: row.content, updated_at: new Date().toISOString() })
+          .eq("id", row.existing.id);
+        if (error) return toast(error.message);
+      } else {
+        const { error } = await supabaseClient.from("chapter_paragraphs")
+          .insert({ chapter_id: chapterId, paragraph_number: row.number, content: row.content });
+        if (error) return toast(error.message);
+      }
+    }
+
+    for (const oldParagraph of (existing || []).filter(p => unused.has(p.id))) {
+      const { count: commentCount } = await supabaseClient.from("comments")
+        .select("id", { count: "exact", head: true }).eq("paragraph_id", oldParagraph.id);
+      const { count: bookmarkCount } = await supabaseClient.from("bookmarks")
+        .select("paragraph_id", { count: "exact", head: true }).eq("paragraph_id", oldParagraph.id);
+      if ((commentCount || 0) === 0 && (bookmarkCount || 0) === 0) {
+        await supabaseClient.from("chapter_paragraphs").delete().eq("id", oldParagraph.id);
+      }
+      // Annotated deleted paragraphs stay archived with a negative number so their
+      // comments/bookmarks keep their UUID without appearing in the reader.
+    }
+
+    await supabaseClient.from("stories").update({ updated_at: new Date().toISOString() }).eq("id", storyId);
+
+    if (status === "published" && previousStatus !== "published") {
+      const story = stories.find(s => Number(s.id) === storyId);
+      if (story) {
+        const { data: followers } = await supabaseClient.from("follows").select("user_id").eq("story_id", storyId);
+        for (const f of followers || []) {
+          await createNotification(f.user_id, "new_chapter", { story_id: storyId, chapter_id: chapterId, title });
+        }
+      }
+    }
+
+    toast(editingChapterId
+      ? (status === "published" ? "تم تحديث ونشر الفصل ✦" : "تم تحديث المسودة ✓")
+      : (status === "published" ? "نُشر الفصل ✦" : "حُفظت المسودة ✓"));
+    editingChapterId = null;
+    $("chapterTitle").value = "";
+    $("chapterContent").value = "";
+    await loadStories();
+    await loadWriter();
+  };
+
+  // Library / playlists
+  // ----------------------------
+  window.createPlaylist = async function () {
+    if (!supabaseClient || !currentUser) {
+      openAuth("signin");
+      return;
+    }
+
+    const name = window.prompt("اسم القائمة الجديدة");
+    if (!name?.trim()) return;
+
+    const { error } = await supabaseClient
+      .from("playlists")
+      .insert({ user_id: currentUser.id, name: name.trim() });
+
+    if (error) {
+      toast(error.message);
+      return;
+    }
+
+    toast("تم إنشاء القائمة ✦");
+    loadLibrary();
+  };
+
+  async function loadLibrary() {
+    const library = $("libraryContent");
+    const playlists = $("playlistList");
+
+    if (!supabaseClient || !currentUser) {
+      if (library) {
+        library.innerHTML = `<div class="empty"><div><div class="star">◇</div><strong>سجّل الدخول لترى مكتبتك.</strong><p>الروايات التي تتابعها ستظهر هنا.</p></div></div>`;
+      }
+      if (playlists) playlists.innerHTML = "";
+      return;
+    }
+
+    const { data: follows, error: fError } = await supabaseClient
+      .from("follows")
+      .select("story_id")
+      .eq("user_id", currentUser.id);
+
+    if (fError) {
+      console.error("Library follows error:", fError);
+      return toast(fError.message);
+    }
+
+    const ids = (follows || []).map(x => x.story_id);
+    const saved = stories.filter(s => ids.includes(s.id));
+
+    library.innerHTML = saved.length
+      ? `<div class="cards">${saved.map(storyCard).join("")}</div>`
+      : `<div class="empty"><div><div class="star">◇</div><strong>مكتبتك ما زالت فارغة.</strong><p>أضيفي أول عالم إلى مدارك.</p></div></div>`;
+
+    const { data: listData, error: pError } = await supabaseClient
+      .from("playlists")
+      .select("id,name,description,is_public,created_at")
+      .eq("user_id", currentUser.id)
+      .order("created_at", { ascending: false });
+
+    if (pError) {
+      console.error("Playlist load error:", pError);
+      playlists.innerHTML = `<div class="empty"><div><div class="star">✧</div><strong>تعذر تحميل القوائم.</strong></div></div>`;
+      return;
+    }
+
+    playlists.innerHTML = (listData || []).length
+      ? listData.map(p => `
+        <div class="playlist-card">
+          <span><b>${esc(p.name)}</b><br><small>${esc(p.description || "قائمة قراءة")}</small></span>
+          <button class="btn subtle" onclick="openPlaylist(${p.id})">فتح</button>
+        </div>`).join("")
+      : `<div class="empty"><div><div class="star">✧</div><strong>لا توجد قوائم بعد.</strong><p>أنشئي أول قائمة قراءة.</p></div></div>`;
+  }
+
+  // ----------------------------
+  let pendingPlaylistStoryId = null;
+
+  window.addStoryToPlaylist = async function (storyId) {
+    if (!supabaseClient || !currentUser) return openAuth("signin");
+    const { data: lists, error } = await supabaseClient.from("playlists")
+      .select("id,name,description").eq("user_id", currentUser.id).order("created_at", { ascending: false });
+    if (error) return toast(error.message);
+    pendingPlaylistStoryId = storyId;
+    const options = $("playlistOptions");
+    options.innerHTML = lists?.length
+      ? lists.map((p, i) => `<label class="playlist-option"><input type="radio" name="lunaPlaylist" value="${p.id}" ${i === 0 ? "checked" : ""}> <span>${esc(p.name)}</span></label>`).join("")
+      : `<div class="empty"><div><div class="star">✧</div><strong>لا توجد قوائم بعد.</strong><p>أنشئي واحدة من الحقل أدناه.</p></div></div>`;
+    $("newPlaylistInline").value = "";
+    $("playlistModal").classList.add("show");
+  };
+
+  window.closePlaylistModal = function () {
+    $("playlistModal")?.classList.remove("show");
+    pendingPlaylistStoryId = null;
+  };
+
+  window.createAndAddPlaylist = async function () {
+    if (!supabaseClient || !currentUser || !pendingPlaylistStoryId) return;
+    const name = $("newPlaylistInline").value.trim();
+    if (!name) return toast("اكتبي اسم القائمة أولًا.");
+    const { data: list, error } = await supabaseClient.from("playlists")
+      .insert({ user_id: currentUser.id, name }).select("id").single();
+    if (error) return toast(error.message);
+    await insertStoryIntoPlaylist(list.id, pendingPlaylistStoryId);
+  };
+
+  window.confirmPlaylistAdd = async function () {
+    if (!pendingPlaylistStoryId) return;
+    const selected = document.querySelector('input[name="lunaPlaylist"]:checked');
+    if (!selected) return toast("اختاري قائمة أولًا.");
+    await insertStoryIntoPlaylist(Number(selected.value), pendingPlaylistStoryId);
+  };
+
+  async function insertStoryIntoPlaylist(playlistId, storyId) {
+    const { data: existing } = await supabaseClient.from("playlist_items")
+      .select("story_id").eq("playlist_id", playlistId).eq("story_id", storyId).maybeSingle();
+    if (existing) {
+      closePlaylistModal();
+      return toast("الرواية موجودة بالفعل في القائمة.");
+    }
+    const { data: last } = await supabaseClient.from("playlist_items")
+      .select("position").eq("playlist_id", playlistId).order("position", { ascending: false }).limit(1);
+    const position = (last?.[0]?.position || 0) + 1;
+    const { error } = await supabaseClient.from("playlist_items")
+      .insert({ playlist_id: playlistId, story_id: storyId, position });
+    if (error) return toast(error.message);
+    closePlaylistModal();
+    toast("أضيفت الرواية إلى قائمتك ✦");
+    await loadLibrary();
+  }
+
+  window.openPlaylist = async function (playlistId) {
+    if (!supabaseClient || !currentUser) return openAuth("signin");
+    const { data: playlist, error } = await supabaseClient.from("playlists")
+      .select("id,name,description,is_public").eq("id", playlistId).single();
+    if (error) return toast(error.message);
+    const { data: items, error: itemError } = await supabaseClient.from("playlist_items")
+      .select("story_id,position").eq("playlist_id", playlistId).order("position");
+    if (itemError) return toast(itemError.message);
+    const itemStories = (items || []).map(i => stories.find(s => Number(s.id) === Number(i.story_id))).filter(Boolean);
+    document.querySelectorAll("#library .temporary-playlist-view").forEach(el => el.remove());
+    const section = document.createElement("section");
+    section.className = "section temporary-playlist-view";
+    section.innerHTML = `<div class="section-head"><h3>${esc(playlist.name)}</h3><span>${esc(playlist.description || "قائمة قراءة")}</span></div><div class="cards">${itemStories.length ? itemStories.map(storyCard).join("") : `<div class="empty" style="grid-column:1/-1;"><div><div class="star">✧</div><strong>القائمة فارغة.</strong></div></div>`}</div>`;
+    $("library")?.appendChild(section);
+    section.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Profile
+  // ----------------------------
+  async function loadProfile() {
+    if (!currentUser || !supabaseClient) return;
+
+    const { data: profile, error } = await supabaseClient
+      .from("profiles")
+      .select("*")
+      .eq("id", currentUser.id)
+      .maybeSingle();
+
+    if (error) {
+      console.error("Profile load error:", error);
+      toast(error.message);
+      return;
+    }
+
+    const prof = profile || {
+      display_name: currentUser.user_metadata?.display_name || currentUser.email?.split("@")[0] || "كاتب LUNA",
+      profile_name: "",
+      username: currentUser.user_metadata?.username || "",
+      bio: "",
+      avatar_url: "",
+      cover_url: ""
+    };
+
+    $("profileName").textContent = prof.profile_name || prof.display_name || "كاتب LUNA";
+    $("profileUsername").textContent = "@" + (prof.username || "username");
+    $("profileBio").textContent = prof.bio || "اكتب نبذة عن عالمك.";
+
+    $("profileDisplayName").value = prof.profile_name || prof.display_name || "";
+    $("profileUsernameEdit").value = prof.username || "";
+    $("profileBioEdit").value = prof.bio || "";
+    $("profileAvatarUrl").value = prof.avatar_url || "";
+    $("profileCoverUrl").value = prof.cover_url || "";
+
+    $("profileAvatar").style.backgroundImage = prof.avatar_url ? `url("${prof.avatar_url}")` : "";
+    $("profileBanner").style.backgroundImage = prof.cover_url ? `url("${prof.cover_url}")` : "";
+
+    const mine = stories.filter(s => s.author_id === currentUser.id);
+    $("storiesCount").textContent = mine.length;
+
+    const { count: followers } = await supabaseClient
+      .from("user_follows")
+      .select("*", { count: "exact", head: true })
+      .eq("followed_id", currentUser.id);
+
+    const { count: following } = await supabaseClient
+      .from("user_follows")
+      .select("*", { count: "exact", head: true })
+      .eq("follower_id", currentUser.id);
+
+    $("followersCount").textContent = followers || 0;
+    $("followingCount").textContent = following || 0;
+    $("accountStatus").textContent = currentUser.email || "مسجل";
+
+    $("profileStories").innerHTML = mine.length
+      ? mine.map(storyCard).join("")
+      : `<div class="empty" style="grid-column:1/-1;"><div><div class="star">✦</div><strong>لا توجد روايات بعد.</strong><p>اكتبي أول عالم لكِ في LUNA.</p></div></div>`;
+  }
+
+  window.saveProfile = async function () {
+    if (!supabaseClient || !currentUser) {
+      openAuth("signin");
+      return;
+    }
+
+    const payload = {
+      id: currentUser.id,
+      profile_name: $("profileDisplayName").value.trim(),
+      display_name: $("profileDisplayName").value.trim() || "كاتب لونا",
+      username: $("profileUsernameEdit").value.trim(),
+      bio: $("profileBioEdit").value.trim(),
+      avatar_url: $("profileAvatarUrl").value.trim() || null,
+      cover_url: $("profileCoverUrl").value.trim() || null
+    };
+
+    const { error } = await supabaseClient
+      .from("profiles")
+      .upsert(payload);
+
+    if (error) {
+      console.error("Profile save error:", error);
+      toast(error.message || "تعذر حفظ الملف.");
+      return;
+    }
+
+    toast("تم حفظ ملفك ✦");
+    await loadProfile();
+  };
+
+  // ----------------------------
+  // Notifications / messages
+  // ----------------------------
+  async function updateNotificationBadge() {
+    const badge = $("notificationBadge");
+    if (!badge) return;
+    if (!supabaseClient || !currentUser) {
+      badge.hidden = true;
+      badge.textContent = "0";
+      return;
+    }
+    const { count, error } = await supabaseClient.from("notifications")
+      .select("id", { count: "exact", head: true })
+      .eq("user_id", currentUser.id).eq("read", false);
+    if (error) return console.error("Notification badge error:", error);
+    badge.textContent = String(count || 0);
+    badge.hidden = !count;
+  }
+
+  async function loadNotifications() {
+    const list = $("notificationList");
+    if (!list) return;
+
+    if (!supabaseClient || !currentUser) {
+      list.innerHTML = `<div class="empty"><div><div class="star">✦</div><strong>سجّلي الدخول لرؤية إشعاراتك.</strong></div></div>`;
+      await updateNotificationBadge();
+      return;
+    }
+
+    const { data, error } = await supabaseClient
+      .from("notifications")
+      .select("id,type,payload,read,created_at")
+      .eq("user_id", currentUser.id)
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      console.error("Notification error:", error);
+      list.innerHTML = `<div class="empty"><div><div class="star">✦</div><strong>تعذر تحميل الإشعارات.</strong></div></div>`;
+      return;
+    }
+
+    await updateNotificationBadge();
+
+    list.innerHTML = data?.length
+      ? data.map(n => `
+        <div class="playlist-card" style="opacity:${n.read ? .62 : 1};cursor:pointer" onclick="markNotificationRead(${n.id})">
+          <span><b>${esc(n.type)}</b><br><small>${new Date(n.created_at).toLocaleString("ar")}</small></span>
+          ${n.read ? "" : `<button class="btn subtle" onclick="event.stopPropagation();markNotificationRead(${n.id})">قرأتُها</button>`}
+        </div>`).join("")
+      : `<div class="empty"><div><div class="star">✦</div><strong>لا توجد إشعارات بعد.</strong><p>كل متابعة أو تعليق أو تصويت جديد سيظهر هنا.</p></div></div>`;
+  }
+
+  window.markNotificationRead = async function (notificationId) {
+    if (!supabaseClient || !currentUser) return;
+    const { error } = await supabaseClient.from("notifications").update({ read: true }).eq("id", notificationId).eq("user_id", currentUser.id);
+    if (error) return toast(error.message);
+    await loadNotifications();
+    await updateNotificationBadge();
+  };
+
+  async function loadMessages() {
+    const body = $("chatBody"), list = $("threadList");
+    if (!body || !list) return;
+    if (!supabaseClient || !currentUser) {
+      list.innerHTML = `<div class="thread active"><b>مساحة LUNA</b><small>سجّلي الدخول للرسائل.</small></div>`;
+      body.innerHTML = `<div class="empty" style="min-height:350px;"><div><div class="star">✉</div><strong>سجّلي الدخول لبدء المحادثة.</strong></div></div>`;
+      return;
+    }
+    const { data: memberships, error } = await supabaseClient.from("conversation_members").select("conversation_id").eq("user_id", currentUser.id);
+    if (error) return toast(error.message);
+    const ids = (memberships || []).map(x => x.conversation_id);
+    if (!ids.length) {
+      list.innerHTML = `<div class="thread active"><b>لا توجد محادثات</b><small>ابدئي محادثة جديدة.</small></div>`;
+      body.innerHTML = `<div class="empty" style="min-height:350px;"><div><div class="star">✉</div><strong>لا توجد رسائل بعد.</strong><p>اضغطي "+ محادثة" لبدء واحدة.</p></div></div>`;
+      return;
+    }
+    const { data: members } = await supabaseClient.from("conversation_members").select("conversation_id,user_id").in("conversation_id", ids);
+    const partnerIds = [...new Set((members || []).filter(m => m.user_id !== currentUser.id).map(m => m.user_id))];
+    const { data: profiles } = partnerIds.length ? await supabaseClient.from("profiles").select("id,display_name,username").in("id", partnerIds) : { data: [] };
+    const partnerMap = Object.fromEntries((profiles || []).map(p => [p.id, p]));
+    list.innerHTML = (members || []).filter(m => m.user_id !== currentUser.id).map(m => {
+      const p = partnerMap[m.user_id] || { display_name: "مستخدم LUNA" };
+      return `<div class="thread" onclick="openConversation(${m.conversation_id})"><b>${esc(p.display_name)}</b><small>@${esc(p.username || "username")}</small></div>`;
+    }).join("") || `<div class="thread active"><b>لا توجد محادثات</b><small>ابدئي محادثة جديدة.</small></div>`;
+    if (!activeConversationId || !ids.includes(activeConversationId)) await openConversation(ids[0]);
+  }
+
+  window.openConversation = async function (conversationId) {
+    if (!supabaseClient || !currentUser) return openAuth("signin");
+    activeConversationId = conversationId;
+    const { data: messages, error } = await supabaseClient.from("messages")
+      .select("id,sender_id,content,created_at").eq("conversation_id", conversationId).order("created_at");
+    if (error) return toast(error.message);
+    const body = $("chatBody");
+    body.innerHTML = (messages || []).map(m => `<div class="bubble ${m.sender_id === currentUser.id ? "me" : ""}">${esc(m.content)}</div>`).join("") || `<div class="empty" style="min-height:350px;"><div><div class="star">✉</div><strong>ابدأ الحديث.</strong></div></div>`;
+    body.scrollTop = body.scrollHeight;
+  };
+
+  window.newConversation = async function () {
+    if (!supabaseClient || !currentUser) return openAuth("signin");
+    const username = window.prompt("اكتبي اسم المستخدم الذي تريدين مراسلته، بدون @");
+    if (!username?.trim()) return;
+    const clean = username.trim().replace(/^@/, "");
+    const { data: profile, error } = await supabaseClient.from("profiles").select("id,display_name,username").eq("username", clean).maybeSingle();
+    if (error) return toast(error.message);
+    if (!profile) return toast("لم نجد هذا المستخدم.");
+    if (profile.id === currentUser.id) return toast("لا يمكنك بدء محادثة مع نفسك.");
+    const { data: ownMemberships } = await supabaseClient.from("conversation_members").select("conversation_id").eq("user_id", currentUser.id);
+    const ids = (ownMemberships || []).map(x => x.conversation_id);
+    if (ids.length) {
+      const { data: matches } = await supabaseClient.from("conversation_members").select("conversation_id,user_id").in("conversation_id", ids).eq("user_id", profile.id);
+      if (matches?.length) return openConversation(matches[0].conversation_id);
+    }
+    const { data: conv, error: convError } = await supabaseClient.from("conversations").insert({}).select().single();
+    if (convError) return toast(convError.message);
+    const { error: memberError } = await supabaseClient.from("conversation_members").insert([
+      { conversation_id: conv.id, user_id: currentUser.id },
+      { conversation_id: conv.id, user_id: profile.id }
+    ]);
+    if (memberError) return toast(memberError.message);
+    await loadMessages();
+    await openConversation(conv.id);
+  };
+
+  window.sendMessage = async function () {
+    if (!supabaseClient || !currentUser) return openAuth("signin");
+    if (!activeConversationId) return toast("ابدئي محادثة أولًا.");
+    const input = $("messageInput");
+    const content = input?.value.trim();
+    if (!content) return;
+    const { error } = await supabaseClient.from("messages").insert({ conversation_id: activeConversationId, sender_id: currentUser.id, content });
+    if (error) return toast(error.message);
+    input.value = "";
+    await openConversation(activeConversationId);
+  };
+
+  $("messageInput")?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      window.sendMessage();
+    }
+  });
+
+  // ----------------------------
+  // Search
+  // ----------------------------
+  $("globalSearch")?.addEventListener("input", (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    if (!q) {
+      showView("home");
+      return;
+    }
+
+    showView("discover");
+    const filtered = stories.filter(s =>
+      `${s.title} ${s.profile?.display_name || ""} ${s.profile?.username || ""}`
+        .toLowerCase()
+        .includes(q)
+    );
+    renderStories(filtered);
+    $("discoverSearch").value = q;
+  });
+
+  $("discoverSearch")?.addEventListener("input", (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    const filtered = stories.filter(s =>
+      `${s.title} ${s.profile?.display_name || ""} ${s.profile?.username || ""}`
+        .toLowerCase()
+        .includes(q)
+    );
+    renderStories(filtered);
+  });
+
+  // ----------------------------
+  // Boot
+  // ----------------------------
+  if (supabaseClient) {
+    supabaseClient.auth.onAuthStateChange(() => {
+      setTimeout(() => refreshSession(), 0);
+    });
+  }
+
+  refreshSession();
+})();
 </script>
 </body>
 </html>
