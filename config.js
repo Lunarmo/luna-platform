@@ -7,3 +7,4 @@ window.LUNA_CONFIG = {
 
 // LUNA UI modules are loaded separately so the main page can evolve safely.
 document.write('<script src="js/header-redesign.js"><\\/script>');
+document.write('<script src="js/user-home.js"><\\/script>');
